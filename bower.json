@@ -1,4 +1,7 @@
 {
-    "name": "Handsontable",
-    "version": "1.0.0"
+  "name": "Handsontable.com",
+  "version": "0.0.1",
+  "dependencies": {
+    "fastclick": "~1.0.6"
+  }
 }
