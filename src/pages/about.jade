@@ -1,0 +1,50 @@
+extends ../layouts/base
+
+block variables
+    page_name = "About"
+    page_class = "about"
+    page_subclass = "subpage"
+    title = "About"
+    description = "Handsontable - JavaScript data grid editor. Excel-like grid editing with HTML & JavaScript"
+
+block content
+    .about-details
+        .row
+            .large-12.columns
+                ul.large-block-grid-2.medium-block-grid-2.small-block-grid-1
+                    li
+                        h2 Hello, Servus, Bonjour!
+                        hr
+                        p.about-team
+                            span
+                                | Handsontable is the open source project of Excel-like data grid component for web apps. It is actively developed within great community of contributors since Marcin Warpechowski decided to release his private project on GitHub in 2011. Since that time Handsontable with its great features became one of the most popular JavaScript data grids in the world.
+                            span
+                                | Handontable is now commonly used by various of industries like Finance and Banking, IT, Science and Sport as well as in many purposes like Analysis and Modeling, Data entry, Budgeting, Advanced calculations and Decisions matrix. Among the users are companies like Plotly, Infogr.am and Datawrapper and many more commercial and open source projects. Currently this project is being developed, maintained and supported by Nextgen.
+                            span
+                                | If you are interested what we’re up to, just check current milestones at our backlog.
+                    li.team.text-center
+                        ul.large-block-grid-3.medium-block-grid-2.small-block-grid-2
+                            li
+                                img(src="#{data.baseUrl}images/team/marcin-warpechowski.png", alt="Marcin Warpechowski")
+                                h4 Marcin Warpechowski
+                                p System architect
+                            li
+                                img(src="#{data.baseUrl}images/team/krzysztof-spilka.png", alt="Krzysztof Spilka")
+                                h4 Krzysztof Spilka
+                                p CEO
+                            li
+                                img(src="#{data.baseUrl}images/team/jan-siegel.png", alt="Jan Siegel")
+                                h4 Jan Siegel
+                                p Developer
+                            li
+                                img(src="#{data.baseUrl}images/team/krzysztof-budnik.png", alt="Krzysztof Budnik")
+                                h4 Krzysztof Budnik
+                                p Developer
+                            li
+                                img(src="#{data.baseUrl}images/team/jakub-klekociuk.png", alt="Jakub Klekociuk")
+                                h4 Jakub Klekociuk
+                                p Developer
+                            li
+                                img(src="#{data.baseUrl}images/team/grzegorz-bera.png", alt="Grzegorz Bera")
+                                h4 Grzegorz Bera
+                                p Developer

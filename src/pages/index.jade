@@ -1,0 +1,245 @@
+extends ../layouts/base
+
+block variables
+    page_name = "Main page"
+    page_class = "main"
+    page_subclass = ""
+    title = "Handsontable"
+    description = "Handsontable - JavaScript data grid editor. Excel-like grid editing with HTML & JavaScript"
+
+block banner
+    .row
+        .large-12.columns
+            ul.large-block-grid-2
+                li
+                    h1 Excel-like data grid for apps
+                    h2 Pure JavaScript library supported by vast community
+                        .banner-buttons
+                            a.button.radius.get-started(href="http://developer.handsontable.com/get-started") Get started
+                            a.button.radius.download(href="https://github.com/handsontable/handsontable/releases/latest", target="_blank") Download v. 0.13.1
+                li.text-center.show-for-large-up [Handsontable]
+
+block content
+    .what-is
+        .row
+            .large-12.columns
+                ul.large-block-grid-2
+                    li.col-left
+                        h2 What is Handsontable
+                        hr
+                        p
+                            | Handsontable is a powerful data grid component with Excel-like appearance. Built in pure JavaScript integrates
+                            | with any data source with peak efficiency. It provides powerful features like data validation, sorting,
+                            | grouping or column ordering. Handsontable is distributed free under MIT license.
+                            .social-buttons
+                                a.github-button(href="https://github.com/handsontable/handsontable", data-icon="octicon-star", data-count-href="/handsontable/handsontable/stargazers", data-count-api="/repos/handsontable/handsontable#stargazers_count") Star
+                                a.github-button(href="https://github.com/handsontable/handsontable", data-icon="octicon-git-branch", data-count-href="/handsontable/handsontable/network", data-count-api="/repos/handsontable/handsontable#forks_count") Fork
+                    li.col-right.text-center.show-for-large-up
+                        p
+                            | Handsontable is robust even when displaying
+                            br
+                            | and editing big amount of data.
+                        a.button(href="#") Load 1 million rows now
+
+    .circles.row-grey.text-center
+        .row
+            .large-12.columns
+                ul.large-block-grid-4.medium-block-grid-4.small-block-grid-1
+                    li
+                        i.fa.fa-rocket.fa-4x.fa-flip-horizontal.c-red
+                        h3 HIGH PERFORMANCE
+                        p
+                            | No matter whether you have
+                            br
+                            | single one row or one million of them
+                    li
+                        i.fa.fa-code.fa-4x.c-bluegrey
+                        h3 OPEN SOURCE
+                        p
+                            | Great community support
+                            br
+                            | and free for commercial projects
+                    li
+                        i.fa.fa-table.fa-4x.c-green
+                        h3 EXCEL-LIKE APPEARANCE
+                        p
+                            | Copy-paste from MS Excel
+                            br
+                            | to see the magic happens
+                    li
+                        i.fa.fa-plug.fa-4x.c-bluegrey
+                        h3 EASY INTEGRATION
+                        p
+                            | Integrate to your backend
+                            br
+                            | or any other data source
+
+    .row.flavors.text-center
+        .large-8.columns.small-centered
+            h2 Available in many flavors
+            h3 Use Handsontable however you like
+            ul.large-block-grid-3.medium-block-grid-3.small-block-grid-1
+                li
+                    a(href="https://github.com/handsontable/ngHandsontable", target="_blank")
+                        img(src="#{data.baseUrl}images/angular-logo.png", alt="AngularJS")
+                li
+                    a(href="https://github.com/handsontable/hot-table", target="_blank")
+                        img(src="#{data.baseUrl}images/polymer-logo.png", alt="PolymerJS")
+                li
+                    img(src="#{data.baseUrl}images/jquery-logo.png", alt="jQuery")
+
+    .testimonials.row-silvergrey.text-center
+        .row.text-center.pricing-testimonial
+            .large-12.columns
+                ul.slider(data-orbit="", data-options="timer_speed: 9000; navigation_arrows:false; slide_number: false; resume_on_mouseout: true; next_on_click: false;")
+                    .slide-container(data-orbit-slide="1")
+                        p.t-txt
+                            | "If you need full Excel-like interactivity in a web app,
+                            br
+                            | look no further"
+                        img(src="#{data.baseUrl}images/testimonials/dominic-pouzine.png", alt="Dominic Pouzine")
+                        p.t-name
+                            strong Dominic Pouzine
+                        p.t-pos
+                            | Chief Technical Officer at #{''}
+                            a(href="http://www.bittitan.com", target="_blank") BitTitan
+                    .slide-container(data-orbit-slide="2")
+                        p.t-txt
+                            | "Handsontable was easy to integrate and
+                            br
+                            | proved to be very performant"
+                        img(src="#{data.baseUrl}images/testimonials/andrew-seddon.png", alt="Andrew Seddon")
+                        p.t-name
+                            strong Andrew Seddon
+                        p.t-pos
+                            | Co-founder at #{''}
+                            a(href="http://www.circuithub.com", target="_blank") CircuitHub
+                    .slide-container(data-orbit-slide="3")
+                        p.t-txt
+                            | "Handontable and the team behind it
+                            br
+                            | are the clear champions on this web frontier"
+                        img(src="#{data.baseUrl}images/testimonials/jack-parmer.png", alt="Jack Parmer")
+                        p.t-name
+                            strong Jack Parmer
+                        p.t-pos
+                            | CEO at #{''}
+                            a(href="http://www.plot.ly", target="_blank") Plotly
+                    .slide-container(data-orbit-slide="4")
+                        p.t-txt
+                            | "Our users love how easy it is to enter
+                            br
+                            | and customize their metrics."
+                        img(src="#{data.baseUrl}images/testimonials/mike-preuss.png", alt="Mike Preuss")
+                        p.t-name
+                            strong Mike Preuss
+                        p.t-pos
+                            | CEO at #{''}
+                            a(href="http://www.visible.vc", target="_blank") Visible
+                    .slide-container(data-orbit-slide="5")
+                        p.t-txt
+                            | "It has been pleasure to use Handsontable over
+                            br
+                            | the last year and it's really great to see how it's evolving"
+                        img(src="#{data.baseUrl}images/testimonials/jaroslav-benc.png", alt="Jaroslav Benc")
+                        p.t-name
+                            strong Jaroslav Benc
+                        p.t-pos
+                            | Software engineer at #{''}
+                            a(href="http://www.aviarc.com", target="_blank") Aviarc
+
+    .get-started.row-grey.show-for-large-up
+        .row
+            .large-12.columns
+                ul.large-block-grid-2
+                    li
+                        h2 Get started in just 2 steps
+                        .row.step-1.step
+                            .small-2.columns 1
+                            .small-10.columns
+                                h4 Include Handsontable CSS and JavaScript file
+                                p
+                                    | Make sure you implented it properly, you can here #{''}
+                                    a(href="https://github.com/handsontable/handsontable/releases/latest", target="_blank") download all files
+                        .row.step-2.step
+                            .small-2.columns 2
+                            .small-10.columns
+                                h4 Call the Handsontable code
+                                p
+                                    a(href="http://developer.handsontable.com/get-started") Learn more #{''}
+                                    | about how to use Handsontable
+                        .row
+                            p.text-below
+                                | If you need help or want to know more about Handsontable, don&#8217;t hesitate to #{''}
+                                a(href="mailto:help@handsontable.com") reach out to us
+                                | ,
+                                | we will be happy to help you.
+                    li
+                        .row.browser
+                            .address-bar view-source:your-project.com
+                            .row.viewport
+                                ol
+                                    li.indent-1 &#60;!DOCTYPE html&#62;
+                                    li.indent-1 &#60;html&#62;
+                                    li.indent-2 &#60;head&#62;
+                                    li.indent-3 &#60;title&#62;Handsontable&#60;/title&#62;
+                                    li.indent-3.line-1 &#60;script src="dist/handsontable.full.js"&#62;&#60;/script&#62;
+                                    li.indent-3.line-1 &#60;link rel="stylesheet" href="dist/jquery.handsontable.full.css" /&#62;
+                                    li.indent-2 &#60;/head&#62;
+                                    li.indent-2 &#60;body&#62;
+                                    li.indent-3.line-2 &#60;script&#62;
+                                    li.indent-4.line-2 var data = ["1", "2", "3"];
+                                    li.indent-4.line-2 var $container = $("#example1");
+                                    li.indent-4.line-2 $container.handsontable ({
+                                    li.indent-5.line-2 data: data
+                                    li.indent-4.line-2 });
+                                    li.indent-3.line-2 &#60;/script&#62;
+                                    li.indent-2 &#60;/body&#62;
+                                    li.indent-1 &#60;/html&#62;
+    .clients.text-center
+        .row
+            .large-12.columns
+                h2 Used by hundreds of great companies
+                ul.small-block-grid-1.medium-block-grid-3.large-block-grid-4
+                        li
+                            a(href="http://starcounter.com", target="_blank")
+                                img(src="#{data.baseUrl}images/logos/starcounter.png", alt="Starcounter")
+                        li
+                            a(href="http://bittitan.com", target="_blank")
+                                img(src="#{data.baseUrl}images/logos/bittitan.png", alt="BitTitan")
+                        li
+                            a(href="http://plotly.com", target="_blank")
+                                img(src="#{data.baseUrl}images/logos/plotly.png", alt="Plotly")
+                        li
+                            a(href="http://infogr.am", target="_blank")
+                                img(src="#{data.baseUrl}images/logos/infogram.png", alt="Infogr.am")
+                        li
+                            a(href="http://burkesoftware.com", target="_blank")
+                                img(src="#{data.baseUrl}images/logos/burkesoftware.png", alt="Burke Software")
+                        li
+                            a(href="http://circuithub.com", target="_blank")
+                                img(src="#{data.baseUrl}images/logos/circuithub.png", alt="CircuitHub")
+                        li
+                            a(href="http://onekingslane.com", target="_blank")
+                                img(src="#{data.baseUrl}images/logos/one-kings-lane.png", alt="One Kings Lane")
+                        li
+                            a(href="http://speedfin.pl", target="_blank")
+                                img(src="#{data.baseUrl}images/logos/speedfin.png", alt="SpeedFin")
+                        li
+                            a(href="http://ultantechnologies.com", target="_blank")
+                                img(src="#{data.baseUrl}images/logos/ultan-technologies.png", alt="Ultan Technologies")
+                        li
+                            a(href="http://akindi.com", target="_blank")
+                                img(src="#{data.baseUrl}images/logos/akindi.png", alt="Akindi")
+                        li
+                            a(href="http://aviarc.com", target="_blank")
+                                img(src="#{data.baseUrl}images/logos/aviarc.png", alt="Aviarc")
+                        li
+                            a(href="http://visible.vc", target="_blank")
+                                img(src="#{data.baseUrl}images/logos/visible.png", alt="Visible")
+
+    .try.row-dark-grey.text-center
+        .row
+            .large-12.columns
+                h2 Ready to try Handsontable?
+                a.button(href="http://developer.handsontable.com/get-started") Get started

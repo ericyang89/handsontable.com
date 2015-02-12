@@ -1,0 +1,18 @@
+//mixin postHead(post)
+//    .post-head.group
+//        a(href="#{data.baseUrl}#{post.url}")
+//            h1.post-title= post.title
+//        span.post-date!= [post.date.getUTCFullYear(), post.date.getUTCMonth() + 1, post.date.getUTCDate()].join(' &#183; ')
+//mixin post(post)
+//    mixin postHead(post)
+//    .post-body.markdown!= post.content
+
+//extends base
+//
+//block head
+//  title= post.title
+//  if post.description
+//    meta(name="description", content="#{post.description}")
+//block content
+//  mixin post(post)
+//  include _social

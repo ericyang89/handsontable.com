@@ -1,0 +1,27 @@
+block navigation
+    .row
+        nav.top-bar(data-topbar="", role="navigation")
+            ul.title-area
+                li.name
+                    a(href="/")
+                        img(src="#{data.baseUrl}images/logo.png", alt="Handsontable")
+                li.toggle-topbar.menu-icon
+                    a(href="#")
+                        span
+            section.top-bar-section
+                ul.right
+                    li.has-dropdown
+                        a(href="/", class="overview-el") Overview
+                        ul.dropdown
+                            li.left
+                                a(href="/about.html", class="about-el") About
+                                a(href="/features.html", class="features-el") Features
+                                a(href="/license.html", class="license-el") License
+                                a(href="https://github.com/handsontable/handsontable", target="_blank") GitHub
+                                a(href="https://groups.google.com/forum/#!forum/handsontable", target="_blank") Google Group
+                    li
+                        a(href="/examples.html", class="examples-el") Examples
+                    li
+                        a(href="http://developer.handsontable.com/get-started") Documentation
+                    li
+                        a(href="/help-and-support.html", class="support-el") Help & Support

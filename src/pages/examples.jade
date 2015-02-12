@@ -1,0 +1,92 @@
+extends ../layouts/base
+
+block variables
+    page_name = "Examples"
+    page_class = "examples"
+    page_subclass = "subpage"
+    title = "Examples"
+    description = "Handsontable - JavaScript data grid editor. Excel-like grid editing with HTML & JavaScript"
+
+block content
+    .examples-details
+        .row
+            .large-12.columns.text-center
+                h2.mhead Simplicity in action
+                h3.shead
+                    a(href="#") Get started #{""}
+                    | with Handsontable or #{""}
+                    a(href="#") see support plans
+                #example-filters.text-center.show-for-large-up
+                    dl.tabs(data-tab="")
+                        dd.active
+                            a(href="#panel-1") Finance
+                        dd
+                            a(href="#panel-2") Sport
+                        dd
+                            a(href="#panel-3") Education
+                        dd
+                            a(href="#panel-4") ERP
+                        dd
+                            a(href="#panel-4") Science
+                        dd
+                            a(href="#panel-4") Integrations
+                    .tabs-content
+                        //#panel-1.content.active.row
+                        //    .large-2.large-offset-2.columns
+                        //        p
+                        //            input(type="checkbox")
+                        //            label(for="") Fixed headers
+                        //        p
+                        //            input(type="checkbox")
+                        //            label(for="") Column/row resize
+                        //        p
+                        //            input(type="checkbox")
+                        //            label(for="") Merge cells
+                        //    .large-2.columns
+                        //        p
+                        //            input(type="checkbox")
+                        //            label(for="") Fill handle
+                        //        p
+                        //            input(type="checkbox")
+                        //            label(for="") Sorting
+                        //        p
+                        //            input(type="checkbox")
+                        //            label(for="") Comments
+                        //    .large-2.columns
+                        //        p
+                        //            input(type="checkbox")
+                        //            label(for="") Context menu
+                        //        p
+                        //            input(type="checkbox")
+                        //            label(for="") Conditional formatting
+                        //        p
+                        //            input(type="checkbox")
+                        //            label(for="") Content validation
+                        //    .large-2.columns.end
+                        //        p
+                        //            input(type="checkbox")
+                        //            label(for="") Formula calculation
+                        //        p
+                        //            input(type="checkbox")
+                        //            label(for="") Pagination
+                        //        p
+                        //            input(type="checkbox")
+                        //            label(for="") Something
+                        #panel-1.content
+                            p
+                                | This is the second panel of the basic tab example. This is the second panel of the basic tab example.
+                        #panel-2.content
+                            p
+                                | This is the second panel of the basic tab example. This is the second panel of the basic tab example.
+                        #panel-3.content
+                            p
+                                | This is the third panel of the basic tab example. This is the third panel of the basic tab example.
+                        #panel-4.content
+                            p
+                                | This is the fourth panel of the basic tab example. This is the fourth panel of the basic tab example.
+                        #panel-5.content
+                            p
+                                | This is the fourth panel of the basic tab example. This is the fourth panel of the basic tab example.
+                        #panel-6.content
+                            p
+                                | This is the fourth panel of the basic tab example. This is the fourth panel of the basic tab example.

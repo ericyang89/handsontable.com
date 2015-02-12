@@ -1,0 +1,45 @@
+doctype 5
+html
+    head
+        block variables
+            - var page_name = page_name || "undefined"
+            - var page_class = page_class || "undefined"
+            - var page_subclass = page_subclass || " "
+            - var title = title || "undefined"
+            - var description = description || "undefined"
+        title #{title} #{""}
+            | | Handsontable - JavaScript data grid editor. Excel-like grid editing with HTML & JavaScript
+        meta(charset="utf-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1, user-scalable=no")
+        meta(name="description", content="#{description}")
+        include ../pages/_favicons
+        script(src="#{data.baseUrl}bower_components/foundation/js/vendor/modernizr.js")
+        link(href="#{data.baseUrl}styles/main.css", rel="stylesheet")
+    body(class="#{page_class} #{page_subclass}")
+        header
+            block navigation
+                include ../pages/_menu.jade
+        .banner
+            block banner
+                .row
+                    h3 #{page_name}
+                nav.show-for-medium-up
+                    .row
+                        .breadcrumbs
+                            a(href="#{data.baseUrl}") Overview
+                            span #{page_name}
+        .content
+            block content
+        .footer
+            block footer
+                include ../pages/_footer.jade
+        block scripts
+            script(src="#{data.baseUrl}bower_components/jquery/jquery.min.js")
+            script(src="#{data.baseUrl}scripts/main.js")
+            script(src="#{data.baseUrl}bower_components/foundation/js/vendor/fastclick.js")
+            script(src="#{data.baseUrl}bower_components/foundation/js/foundation.min.js")
+            script#github-bjs(async="", defer="", src="https://buttons.github.io/buttons.js")
+            script
+                (function($) {
+                    $(document).foundation();
+                })(jQuery);

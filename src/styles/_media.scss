@@ -1,0 +1,175 @@
+.row {
+  @media #{$medium} {
+    max-width: 75em;
+  }
+}
+.row {
+  @media #{$medium} {
+    max-width: 75em;
+  }
+}
+header {
+  @media #{$small-only} {
+    padding-top: 0.865rem;
+    .name img {
+      margin: 0 1rem;
+    }
+    & .top-bar-section ul > li:hover a {
+      box-shadow: none;
+    }
+  }
+  & .top-bar-section li:not(.has-form) a:not(.button) {
+    @media #{$medium-only} {
+      padding: 0 0.5rem;
+    }
+  }
+}
+.banner {
+  @media #{$small-only} {
+    padding: 1rem 0 0.5rem;
+    h3 {
+      font-size: 24px;
+    }
+  }
+}
+.main .banner {
+  @media #{$small-only} {
+    padding: 1rem 0 3rem;
+  }
+  @media #{$medium-only} {
+    padding: 4rem 0 6rem;
+  }
+  & h1 {
+    @media #{$small-only} {
+      font-size: 29px;
+    }
+  }
+  & .download {
+    @media #{$small-only} {
+      display: none;
+    }
+  }
+}
+.what-is {
+  & .col-left {
+    @media #{$small-only} {
+      padding: 3rem 0 3rem 0.9375rem;
+    }
+    @media #{$medium-only} {
+      padding: 3rem 0 3rem 0.9375rem;
+    }
+  }
+}
+.flavors {
+  @media #{$small-only} {
+    padding: 3rem 0 2rem;
+  }
+  & li {
+    @media #{$small-only} {
+      margin: 1rem 0;
+    }
+  }
+}
+.testimonials {
+  & .pricing-testimonial p.t-txt {
+      @media #{$small-only} {
+        font-size: 29px;
+      }
+  }
+}
+.clients {
+  @media #{$small-only} {
+    padding: 3rem 0 1rem;
+  }
+  & h2 {
+    @media #{$small-only} {
+      margin-bottom: 1rem;
+    }
+  }
+}
+.try{
+  & h2 {
+    @media #{$small-only} {
+      font-size: 28px;
+    }
+  }
+}
+.about-details {
+  @media #{$small-only} {
+    margin: 2rem 0 0;
+    & p.about-team {
+      width: 100%;
+    }
+  }
+}
+.feature-details {
+  @media #{$small-only} {
+    margin: 2rem 0 0;
+  }
+}
+.license-details {
+  @media #{$small-only} {
+    margin: 2rem 0 0;
+    & .pgraph {
+      width: 100%;
+    }
+  }
+}
+.examples-details {
+  @media #{$small-only} {
+    margin: 2rem 0 0;
+  }
+}
+.support-details {
+  @media #{$small-only} {
+    margin: 2rem 0 0;
+    & h3.shead {
+      margin-bottom: 3rem;
+    }
+    & .pricing-table.plan-2 {
+      top: 0;
+    }
+    & .pricing-contact {
+      margin: 2rem auto 0rem;
+    }
+    & .price-contact h2 {
+      font-size: 28px;
+    }
+  }
+}
+
+.plain-details {
+  @media #{$small-only} {
+    margin: 2rem 0 0;
+  }
+}
+
+/* Contact us */
+.contact-details {
+  @media #{$small-only} {
+    margin: 2rem 0;
+    & .panel {
+      margin: 2rem 0 0;
+    }
+    & p.pgraph a {
+      font-weight: 300;
+      font-size: 1.3rem;
+    }
+  }
+//
+//  & .panel {
+//    margin: 2rem 0;
+//    background: #fff;
+//  }
+
+}
+
+
+.footer {
+  @media #{$small-only} {
+    padding: 2rem 0 1rem;
+    & i.fa {
+      display: none;
+    }
+  }
+}
