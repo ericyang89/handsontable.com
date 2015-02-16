@@ -17,6 +17,9 @@ header {
     & .top-bar-section ul > li:hover a {
       box-shadow: none;
     }
+    & .top-bar-section .right li .dropdown {
+      left: 104%;
+    }
   }
   & .top-bar-section li:not(.has-form) a:not(.button) {
     @media #{$medium-only} {
@@ -100,6 +103,9 @@ header {
     margin: 2rem 0 0;
     & p.about-team {
       width: 100%;
+    }
+    .team {
+      margin-top: 2rem;
     }
   }
 }

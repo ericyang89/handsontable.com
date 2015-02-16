@@ -103,8 +103,11 @@ header {
     padding: 0;
     box-shadow: 0 0 1px #fff inset;
   }
+  & .top-bar-section .right li .dropdown {
+    left: 0;
+  }
   & .top-bar-section .dropdown li {
-    margin-left: 0!important;
+    margin: 0;
   }
   & .top-bar-section ul .dropdown li a {
     font-size: 13px!important;
@@ -315,7 +318,10 @@ header {
   }
   & .row.step {
     margin: 0;
-    padding: 0 0 1rem;
+    padding: 0;
+  }
+  & .row.step-1 {
+    margin-top: 2rem;
   }
   & .step .small-2 {
     color: #d0d0d0;
@@ -491,13 +497,14 @@ header {
   }
   & p.about-team {
     width: 90%;
+    text-align: justify;
   }
   & p.about-team span {
     margin: 1rem 0 0;
     display: block;
   }
   & .team {
-    margin-top: 3rem;
+    margin-top: 5rem;
   }
   & .team img {
     width: 120px;
@@ -625,7 +632,7 @@ header {
     font-size: 1.3rem;
     color: #fff;
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif !important;
-    background-color: #607D8B;
+    background-color: #3B93EA;
   }
   & .pricing-table .price {
     font-size: 1.7rem;
@@ -639,7 +646,7 @@ header {
   & .pricing-table.plan-2 .title {
     padding: 2.3rem 1rem;
     font-size: 1.7rem;
-    background-color: #6E90A0;
+    background-color: #1976D2;
   }
   & .pricing-table .promo-badge {
     position: absolute;
@@ -689,9 +696,10 @@ header {
   & hr {
     width: 13%;
   }
-  & i {
+  & i.fa-heart {
     margin-left: 0.5rem;
     color: #e4e4e4;
+    font-size: 26px;
   }
   & dl dt {
     font-weight: 400;
