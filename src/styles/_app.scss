@@ -103,9 +103,6 @@ header {
     padding: 0;
     box-shadow: 0 0 1px #fff inset;
   }
-  & .top-bar-section .dropdown {
-    left: 0!important;
-  }
   & .top-bar-section .dropdown li {
     margin-left: 0!important;
   }
@@ -548,7 +545,6 @@ header {
   }
   & .pgraph {
     width: 90%;
-    text-align: justify;
   }
   & .pgraph span {
     margin: 1rem 0 0;

@@ -71,10 +71,11 @@ header {
   }
 }
 .testimonials {
-  & .pricing-testimonial p.t-txt {
-      @media #{$small-only} {
-        font-size: 29px;
-      }
+  @media #{$small-only} {
+    padding-bottom: 0.5rem;
+    & .pricing-testimonial p.t-txt {
+      font-size: 29px;
+    }
   }
 }
 .clients {
@@ -153,17 +154,10 @@ header {
     }
     & p.pgraph a {
       font-weight: 300;
-      font-size: 1.3rem;
+      font-size: 1rem;
     }
   }
-//
-//  & .panel {
-//    margin: 2rem 0;
-//    background: #fff;
-//  }
-
 }
-
 
 .footer {
   @media #{$small-only} {
