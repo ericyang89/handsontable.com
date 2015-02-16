@@ -19,12 +19,6 @@ module.exports = function (grunt) {
         }
       }
     },
-    sitemap: {
-      dist: {
-        pattern: ['dist/*.html'],
-        siteRoot: 'dist/'
-      }
-    },
     compass: {
       dist: {
         options: {
@@ -61,7 +55,12 @@ module.exports = function (grunt) {
           files: {
               'jquery/jquery.min.js': 'jquery/dist/jquery.min.js',
               'foundation': 'foundation',
-              'font-awesome': 'font-awesome'
+              'font-awesome': 'font-awesome',
+              'fastclick': 'fastclick',
+              'foundation': 'foundation',
+              'jquery.cookie': 'jquery.cookie',
+              'jquery-placeholder': 'jquery-placeholder',
+              'modernizr': 'modernizr',
           }
       }
     },
@@ -134,5 +133,4 @@ module.exports = function (grunt) {
   require('load-grunt-tasks')(grunt)
 
   grunt.loadNpmTasks('grunt-bowercopy');
-  grunt.loadNpmTasks('grunt-sitemap');
 };

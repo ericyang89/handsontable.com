@@ -2,8 +2,6 @@
   "name": "Handsontable.com",
   "version": "0.0.1",
   "devDependencies": {
-    "font-awesome": "^4.3.0",
-    "foundation": "^4.2.1-1",
     "grunt": "~0.4.1",
     "grunt-bowercopy": "^1.2.0",
     "grunt-contrib-clean": "~0.4.0",
