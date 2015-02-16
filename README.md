@@ -14,8 +14,8 @@ Before you can build this code, you must install necessary dependencies in your 
 - [Git](http://git-scm.com/)
 - [Grunt](http://gruntjs.com/)
 - [Bower](http://bower.io/)
-- [Cabin](http://www.cabinjs.com/) (static site generator)
-    - [Jade](http://jade-lang.com/) (Node template engine)
+
+As a static site generator we use [Cabin](http://www.cabinjs.com/) with [Jade](http://jade-lang.com/) templates.
 
 ## Build
 To build Handsontable.com use the following commands:
