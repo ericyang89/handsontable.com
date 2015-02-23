@@ -7,11 +7,11 @@ block footer
                         li.heading
                             p Overview
                         li
-                            a(href="/about.html") About
+                            a(href="/about-us.html") About us
                         li
                             a(href="/features.html") Features
                         li
-                            a(href="/license.html") License
+                            a(href="/licensing.html") Licensing
                         li
                             a(href="/examples.html") Examples
                 li
@@ -21,7 +21,7 @@ block footer
                         li
                             a(href="http://developer.handsontable.com") Documentation
                         li
-                            a(href="/help-and-support.html") Help & Support
+                            a(href="/pricing.html") Pricing
                         li
                             a(href="https://github.com/handsontable/handsontable", target="_blank") GitHub
                         li
@@ -55,4 +55,6 @@ block footer
                         img(src="#{data.baseUrl}images/handsoncode-logo-footer.png", alt="Handsoncode")
                 li.text-right
                     span
-                        | All trademarks and logos belong to their respective owners. &nbsp;&nbsp;Handsoncode &copy;
+                        | All trademarks belong to their respective owners. &nbsp;&nbsp;Handsoncode &copy; #{""}
+                        script
+                            document.write( new Date().getFullYear() );

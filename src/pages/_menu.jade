@@ -4,24 +4,33 @@ block navigation
             ul.title-area
                 li.name
                     a(href="/")
-                        img(src="#{data.baseUrl}images/logo.png", alt="Handsontable")
+                        img(data-interchange="[#{data.baseUrl}images/logo.png, (default)], [#{data.baseUrl}images/logo-retina.png, (retina)]",
+                        src="#{data.baseUrl}images/logo.png", alt="Handsontable")
                 li.toggle-topbar.menu-icon
                     a(href="#")
                         span
             section.top-bar-section
                 ul.right
                     li.has-dropdown
-                        a(href="/", class="overview-el") Overview
+                        a(href="/about-us.html") About project
                         ul.dropdown
                             li.left
-                                a(href="/about.html", class="about-el") About
                                 a(href="/features.html", class="features-el") Features
-                                a(href="/license.html", class="license-el") License
-                                a(href="https://github.com/handsontable/handsontable", target="_blank") GitHub
-                                a(href="https://groups.google.com/forum/#!forum/handsontable", target="_blank") Google Group
+                                a(href="/licensing.html", class="licensing-el") Licensing
+                                a(href="/about-us.html", class="about-el") About us
                     li
                         a(href="/examples.html", class="examples-el") Examples
                     li
                         a(href="http://developer.handsontable.com/get-started") Documentation
                     li
-                        a(href="/help-and-support.html", class="support-el") Help & Support
+                        a(href="/pricing.html", class="pricing-el") Pricing
+
+                    li.has-dropdown
+                        a(href="/help-and-support.html", class="support-el") Help and Support
+                        ul.dropdown
+                            li.left
+                                a(href="https://github.com/handsontable/handsontable/issues", target="_blank") GitHub issues
+                                a(href="https://groups.google.com/forum/#!forum/handsontable", target="_blank") Google Group
+                                a(href="http://stackoverflow.com/questions/tagged/handsontable", target="_blank") Stack Overflow
+                                a(href="/contact-us.html", class="contact-el") Consultancy
+                                a(href="https://twitter.com/handsontable", target="_blank") Twitter
