@@ -1,0 +1,79 @@
+extends ../layouts/base
+
+block variables
+    page_name = "About us"
+    page_class = "about"
+    page_subclass = "subpage"
+    title = "About us"
+    description = "Handsontable - JavaScript data grid editor. Excel-like grid editing with HTML & JavaScript"
+
+block content
+    .about-details
+        .row
+            .large-12.columns
+                ul.large-block-grid-2.medium-block-grid-2.small-block-grid-1
+                    li
+                        h2 Hello, Servus, Bonjour!
+                        hr
+                        p.about-team
+                            span
+                                | We are #{""}
+                                strong Handsoncode, #{""}
+                                | a team of frontend development enthusiasts focused on contributing to the open source community by making easy to
+                                | use and well supported products. We are able to build on top of that thanks to years
+                                | of experience in the variety of industries we originate from.
+                            span
+                                | Our goal is to help companies and developers deal with data. Our work is user-centered and there is
+                                | more to it - we create backlogs based on our users' feedback.
+                                | There is nothing more rewarding than seeing
+                                | Handsontable used in a various, sometimes completely unexpected, fields.
+                            span
+                                | We are responsible for many open source projects, however we definitely rank
+                                | Handsontable the highest of them all. It all started in 2012 as #{""}
+                                a(href="https://github.com/warpech", target="_blank") Marcin Warpechowski's #{""}
+                                    i.fa.fa-external-link
+                                | #{""} private project. He aimed to have a simple, yet functional data grid and after a
+                                | while, when the first stable version was ready, it
+                                | made its debut on GitHub. Since then Handsontable has been used and widely
+                                | appreciated by thousands of developers and companies.
+                            span
+                                | If you like our work and want to hire us, #{""}
+                                a(href="/contact-us.html") drop us a line.
+
+                        p.about-team
+                            span
+                    li.team.text-center
+                        ul.large-block-grid-3.medium-block-grid-2.small-block-grid-2
+
+                            li
+                                a(href="https://github.com/krzysztofspilka", target="_blank")
+                                    img(src="#{data.baseUrl}images/team/krzysztof-spilka-2.png", alt="Krzysztof Spilka")
+                                h4 Krzysztof Spilka
+                                p CEO
+                            li
+                                a(href="https://github.com/warpech", target="_blank")
+                                    img(src="#{data.baseUrl}images/team/marcin-warpechowski.png", alt="Marcin Warpechowski")
+                                h4 Marcin Warpechowski
+                                p Founder &amp; #{""}
+                                    br
+                                    | Software Architect
+                            li
+                                a(href="https://github.com/jansiegel", target="_blank")
+                                    img(src="#{data.baseUrl}images/team/jan-siegel.png", alt="Jan Siegel")
+                                h4 Jan Siegel
+                                p Developer
+                            li
+                                a(href="https://github.com/budnix", target="_blank")
+                                    img(src="#{data.baseUrl}images/team/krzysztof-budnik.png", alt="Krzysztof Budnik")
+                                h4 Krzysztof Budnik
+                                p Developer
+                            li
+                                a(href="https://github.com/kubak10", target="_blank")
+                                    img(src="#{data.baseUrl}images/team/jakub-klekociuk.png", alt="Jakub Klekociuk")
+                                h4 Jakub Klekociuk
+                                p Developer
+                            li
+                                a(href="https://github.com/Berus", target="_blank")
+                                    img(src="#{data.baseUrl}images/team/grzegorz-bera.png", alt="Grzegorz Bera")
+                                h4 Grzegorz Bera
+                                p Developer
