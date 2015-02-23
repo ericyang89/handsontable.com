@@ -1,6 +1,6 @@
 {
   "name": "Handsontable.com",
-  "version": "0.0.2",
+  "version": "0.0.1",
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-bowercopy": "^1.2.0",
