@@ -57,11 +57,51 @@ module.exports = function (grunt) {
               'foundation': 'foundation',
               'font-awesome': 'font-awesome',
               'fastclick': 'fastclick',
-              'foundation': 'foundation',
               'jquery.cookie': 'jquery.cookie',
               'jquery-placeholder': 'jquery-placeholder',
               'modernizr': 'modernizr',
+              'handsontable': 'handsontable'
           }
+      }
+    },
+    robotstxt: {
+      dist: {
+        dest: 'dist/',
+        policy: [
+          {
+            ua: '*',
+            allow: '/',
+            disallow: ['/bower_components/*', '/scripts/*', '/styles/*', '/page/*', '/posts/*']
+          },
+          {
+            sitemap: ['http://handsontable.com/sitemap.xml']
+          },
+          {
+            host: 'www.handsontable.com'
+          }
+        ]
+      }
+    },
+    xml_sitemap: {
+      default_options: {
+        options: {
+          changefreq: 'weekly',
+          dest: 'dist/',
+          fileName: 'sitemap',
+          siteRoot: 'http://handsontable.com/',
+          lastMod: '2015-02-25',
+          priority: '0.8'
+        },
+        files: [
+          {
+            expand: true,
+            cwd: 'dist/',
+            src: [
+              '*.html',
+              '!_*.html'
+            ]
+          }
+        ]
       }
     },
     watch: {
@@ -119,7 +159,9 @@ module.exports = function (grunt) {
     'pages',
     'compass',
     'copy',
-    'bowercopy'
+    'bowercopy',
+    'robotstxt:dist',
+    'xml_sitemap:default_options'
   ]);
 
   grunt.registerTask('server', [
@@ -130,7 +172,9 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('default', 'server');
-  require('load-grunt-tasks')(grunt)
+  require('load-grunt-tasks')(grunt);
 
   grunt.loadNpmTasks('grunt-bowercopy');
+  grunt.loadNpmTasks('grunt-robots-txt');
+  grunt.loadNpmTasks('grunt-xml-sitemap');
 };

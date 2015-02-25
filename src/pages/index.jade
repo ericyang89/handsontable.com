@@ -17,7 +17,8 @@ block banner
                         .banner-buttons
                             a.button.radius.get-started(href="http://developer.handsontable.com/get-started") Get started
                             a.button.radius.download(href="https://github.com/handsontable/handsontable/releases/latest", target="_blank") Download v. 0.13.1
-                li.text-center.show-for-large-up [Handsontable]
+                li.text-center.show-for-large-up.clear.padding-bottom
+                  div.overflow-auto#intro
 
 block content
     .what-is
@@ -47,7 +48,7 @@ block content
                             | Handsontable handles large amounts
                             br
                             | of data with ease, try it yourself
-                        a.button(href="#") Load 1 million rows now
+                        a.button#load-data(href="#") Load 1 million rows now
 
     .circles.row-grey.text-center
         .row
@@ -162,7 +163,7 @@ block content
                 ul.large-block-grid-2
                     li
                         h2 Get started in just 2 steps
-                        .row.step-1.step
+                        .row.step-1.step(rel="line-1")
                             .small-2.columns 1
                             .small-10.columns
                                 h4 Include Handsontable CSS and JavaScript files
@@ -170,7 +171,7 @@ block content
                                     | Make sure you're adding them properly. #{''}
                                     a(href="https://github.com/handsontable/handsontable/releases/latest", target="_blank") Get the latest release #{""}
                                         i.fa.fa-external-link
-                        .row.step-2.step
+                        .row.step-2.step(rel="line-2")
                             .small-2.columns 2
                             .small-10.columns
                                 h4 Call the Handsontable code

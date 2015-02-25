@@ -15,6 +15,7 @@ html
         include ../pages/_favicons
         script(src="#{data.baseUrl}bower_components/foundation/js/vendor/modernizr.js")
         link(href="#{data.baseUrl}styles/main.css", rel="stylesheet")
+        link(href="#{data.baseUrl}bower_components/handsontable/dist/handsontable.full.min.css", rel="stylesheet")
     body(class="#{page_class} #{page_subclass}")
         header
             block navigation
@@ -35,9 +36,10 @@ html
                 include ../pages/_footer.jade
         block scripts
             script(src="#{data.baseUrl}bower_components/jquery/jquery.min.js")
-            script(src="#{data.baseUrl}scripts/main.js")
             script(src="#{data.baseUrl}bower_components/foundation/js/vendor/fastclick.js")
             script(src="#{data.baseUrl}bower_components/foundation/js/foundation.min.js")
+            script(src="#{data.baseUrl}bower_components/handsontable/dist/handsontable.full.min.js")
+            script(src="#{data.baseUrl}scripts/main.js")
             script#github-bjs(async="", defer="", src="https://buttons.github.io/buttons.js")
             script
                 !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');

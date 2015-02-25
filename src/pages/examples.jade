@@ -16,18 +16,18 @@ block content
                     | Flexible and easy to customize solution
                 #example-filters.text-center.show-for-large-up
                     dl.tabs(data-tab="")
-                        dd.active
+                        dd.active(name="Finance")
                             a(href="#panel-1") Finance
-                        dd
+                        dd(name="Sport")
                             a(href="#panel-2") Sport
-                        dd
+                        dd(name="Education")
                             a(href="#panel-3") Education
-                        dd
+                        dd(name="ERP")
                             a(href="#panel-4") ERP
-                        dd
-                            a(href="#panel-4") Science
-                        dd
-                            a(href="#panel-4") Integrations
+                        dd(name="Science")
+                            a(href="#panel-5") Science
+                        dd(name="Integrations")
+                            a(href="#panel-6") Integrations
                     .tabs-content
                         //#panel-1.content.active.row
                         //    .large-2.large-offset-2.columns
@@ -70,9 +70,9 @@ block content
                         //        p
                         //            input(type="checkbox")
                         //            label(for="") Something
-                        #panel-1.content
+                        #panel-1.content.active(aria-hidden="false")
                             p
-                                | This is the second panel of the basic tab example. This is the second panel of the basic tab example.
+                                | This is the first panel of the basic tab example. This is the second panel of the basic tab example.
                         #panel-2.content
                             p
                                 | This is the second panel of the basic tab example. This is the second panel of the basic tab example.
@@ -84,7 +84,9 @@ block content
                                 | This is the fourth panel of the basic tab example. This is the fourth panel of the basic tab example.
                         #panel-5.content
                             p
-                                | This is the fourth panel of the basic tab example. This is the fourth panel of the basic tab example.
+                                | This is the fifth panel of the basic tab example. This is the fourth panel of the basic tab example.
                         #panel-6.content
                             p
-                                | This is the fourth panel of the basic tab example. This is the fourth panel of the basic tab example.
+                                | This is the sixth panel of the basic tab example. This is the fourth panel of the basic tab example.
+
+                    div.margin-auto.overflow-auto#examples
