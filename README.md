@@ -38,7 +38,7 @@ grunt
 ```
 
 ## Access
-By default, the app will open port 5455 on your localhost (0.0.0.0) so to access it enter the following URL:
+By default, the app will open port 5455 on your localhost (127.0.0.1) so to access it enter the following URL:
 
 ```
 http://localhost:5455/
