@@ -13,80 +13,40 @@ block content
             .large-12.columns.text-center
                 h2.mhead Simplicity in action
                 h3.shead
-                    | Flexible and easy to customize solution
-                #example-filters.text-center.show-for-large-up
+                    a(href="") Get started #{""}
+                    | and deploy apps with ease
+                #example-filters.text-center
                     dl.tabs(data-tab="")
-                        dd.active(name="Finance")
-                            a(href="#panel-1") Finance
-                        dd(name="Sport")
-                            a(href="#panel-2") Sport
-                        dd(name="Education")
-                            a(href="#panel-3") Education
-                        dd(name="ERP")
-                            a(href="#panel-4") ERP
-                        dd(name="Science")
+                        dd.active(name="examples")
+                            a(href="#panel-1") Basic
+                        dd(name="advanced")
+                            a(href="#panel-2") Advanced
+                        dd(name="personal")
+                            a(href="#panel-3") Personal
+                        dd(name="finance")
+                            a(href="#panel-4") Finance
+                        dd(name="science")
                             a(href="#panel-5") Science
-                        dd(name="Integrations")
-                            a(href="#panel-6") Integrations
+                        dd(name="sport")
+                            a(href="#panel-6") Sport
                     .tabs-content
-                        //#panel-1.content.active.row
-                        //    .large-2.large-offset-2.columns
-                        //        p
-                        //            input(type="checkbox")
-                        //            label(for="") Fixed headers
-                        //        p
-                        //            input(type="checkbox")
-                        //            label(for="") Column/row resize
-                        //        p
-                        //            input(type="checkbox")
-                        //            label(for="") Merge cells
-                        //    .large-2.columns
-                        //        p
-                        //            input(type="checkbox")
-                        //            label(for="") Fill handle
-                        //        p
-                        //            input(type="checkbox")
-                        //            label(for="") Sorting
-                        //        p
-                        //            input(type="checkbox")
-                        //            label(for="") Comments
-                        //    .large-2.columns
-                        //        p
-                        //            input(type="checkbox")
-                        //            label(for="") Context menu
-                        //        p
-                        //            input(type="checkbox")
-                        //            label(for="") Conditional formatting
-                        //        p
-                        //            input(type="checkbox")
-                        //            label(for="") Content validation
-                        //    .large-2.columns.end
-                        //        p
-                        //            input(type="checkbox")
-                        //            label(for="") Formula calculation
-                        //        p
-                        //            input(type="checkbox")
-                        //            label(for="") Pagination
-                        //        p
-                        //            input(type="checkbox")
-                        //            label(for="") Something
-                        #panel-1.content.active(aria-hidden="false")
-                            p
-                                | This is the first panel of the basic tab example. This is the second panel of the basic tab example.
-                        #panel-2.content
-                            p
-                                | This is the second panel of the basic tab example. This is the second panel of the basic tab example.
-                        #panel-3.content
-                            p
-                                | This is the third panel of the basic tab example. This is the third panel of the basic tab example.
-                        #panel-4.content
-                            p
-                                | This is the fourth panel of the basic tab example. This is the fourth panel of the basic tab example.
-                        #panel-5.content
-                            p
-                                | This is the fifth panel of the basic tab example. This is the fourth panel of the basic tab example.
-                        #panel-6.content
-                            p
-                                | This is the sixth panel of the basic tab example. This is the fourth panel of the basic tab example.
+                        #examples
 
-                    div.margin-auto.overflow-auto#examples
+                        #panel-1.content
+                        #panel-2.content
+                            p Source of data: #{""}
+                                a(href="https://www.quandl.com/c/demography/total-population-by-country", target="_blank") https://www.quandl.com/c/demography/total-population-by-country #{""}
+                                    i.fa.fa-external-link
+                        #panel-3.content
+                        #panel-4.content
+                            p Source of data: #{""}
+                                a(href="https://www.quandl.com/c/markets/bitcoin-data", target="_blank") https://www.quandl.com/c/markets/bitcoin-data #{""}
+                                    i.fa.fa-external-link
+                        #panel-5.content
+                            p Source of data: #{""}
+                                a(href="https://plot.ly/~JStevens/0/an-age-distribution-for-scientific-genius", target="_blank") https://plot.ly/~JStevens/0/an-age-distribution-for-scientific-genius #{""}
+                                    i.fa.fa-external-link
+                        #panel-6.content
+                            p Source of data: #{""}
+                                a(href="http://www.forbes.com/nba-valuations/list", target="_blank") http://www.forbes.com/nba-valuations/list  #{""}
+                                    i.fa.fa-external-link

@@ -1,0 +1,73 @@
+/* Main page example */
+.main .handsontable-holder {
+  min-height: 336px;
+  padding: 0;
+  /* fade-in onload */
+    @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+    @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+    @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+    opacity:0;
+
+    -webkit-animation:fadeIn ease-in 1;
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+
+    -webkit-animation-fill-mode:forwards;
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+
+    -webkit-animation-duration:.5s;
+    -moz-animation-duration:.5s;
+    animation-duration:.5s;
+
+    -webkit-animation-delay: 0.5s;
+    -moz-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+}
+
+/* All examples */
+#intro.handsontable, #examples.handsontable, #advanced.handsontable,
+#personal.handsontable, #finance.handsontable, #science.handsontable,
+#sport.handsontable {
+  overflow: hidden;
+  margin: 2rem auto 0;
+  &:not(.ht_master) table {
+    box-shadow: 0px 1px 0 #ccc;
+    -webkit-box-shadow: 0px 1px 0 #ccc;
+  }
+  & td, & th {
+    font-size: 13px;
+    line-height: 22px;
+  }
+  & input, & textarea {
+    line-height: 18px;
+    padding-left: 3px;
+    box-shadow: 0px 1px 0 #ccc;
+    -webkit-box-shadow: 0px 1px 0 #ccc;
+  }
+}
+.examples .handsontable {
+  & .wtHolder {
+    padding-bottom: 1px;
+  }
+  &.htContextMenu table tbody tr td div {
+    font-size: 13px;
+  }
+}
+
+/* Basic */
+#examples {
+  min-height: 948px;
+}
+
+/* Advanced */
+#advanced {
+  & .htCore > tbody > tr:nth-child(odd) > td {
+     background-color: #f9f9f9;
+  }
+}
+
+
+
+

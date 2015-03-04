@@ -3,14 +3,9 @@
     max-width: 75em;
   }
 }
-.row {
-  @media #{$medium} {
-    max-width: 75em;
-  }
-}
 header {
   @media #{$small-only} {
-    padding-top: 0.865rem;
+    padding: 0.865rem 0;
     .name img {
       margin: 0 1rem;
     }
@@ -27,9 +22,14 @@ header {
     }
   }
 }
+.main header {
+  @media #{$small-only} {
+    padding-bottom: 2rem;
+  }
+}
 .banner {
   @media #{$small-only} {
-    padding: 1rem 0 0.5rem;
+    padding: 0;
     h3 {
       font-size: 24px;
     }
@@ -49,7 +49,7 @@ header {
   }
   & .download {
     @media #{$small-only} {
-      display: none;
+      margin-top: 1rem;
     }
   }
 }
@@ -125,6 +125,23 @@ header {
 .examples-details {
   @media #{$small-only} {
     margin: 2rem 0 0;
+    & .tabs {
+      padding: 0;
+      display: block;
+    }
+    & .tabs dd {
+      width: 50%;
+      top: 0!important;
+    }
+    & .tabs dd > a {
+      padding: 1.2rem 0;
+      box-shadow: none;
+      border-width: 1px 1px 0 1px;
+      border-color: #dfdfdf;
+    }
+    & .tabs dd:nth-child(3) > a, & .tabs dd:nth-child(5) > a {
+      border-left: 1px solid #dfdfdf;
+    }
   }
 }
 .pricing-details {
@@ -133,25 +150,46 @@ header {
     & h3.shead {
       margin-bottom: 3rem;
     }
-    & .pricing-table.plan-2 {
-      top: 0;
+    & .pgraph {
+      width: 100%;
     }
-    & .pricing-contact {
-      margin: 2rem auto 0rem;
+    & .tabs dd {
+      width: 50%;
+      top: 0!important;
     }
-    & .price-contact h2 {
-      font-size: 28px;
+    & .tabs dd > a {
+      padding: 1.2rem 0;
+      box-shadow: none;
+      border-width: 1px 1px 0 1px;
+      border-color: #dfdfdf;
+    }
+    & .tabs dd:nth-child(1) > a, & .tabs dd:nth-child(3) > a {
+      border-left: 1px solid #dfdfdf;
+    }
+    & .tabs-content li {
+      border-right: 1px solid #dfdfdf;
+    }
+    & #pricing-plans {
+      margin-top: 0;
+    }
+    & .price-faq h2 {
+      margin: 1rem 0 2rem;
+    }
+  }
+  @media #{$medium-only} {
+      & .pgraph {
+        width: 90%;
+      }
+    & .tabs dd {
+      width: 18%;
     }
   }
 }
-
 .plain-details {
   @media #{$small-only} {
     margin: 2rem 0 0;
   }
 }
-
-/* Contact us */
 .contact-details {
   @media #{$small-only} {
     margin: 2rem 0;
@@ -164,7 +202,6 @@ header {
     }
   }
 }
-
 .footer {
   @media #{$small-only} {
     padding: 2rem 0 1rem;

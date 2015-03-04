@@ -69,40 +69,6 @@ a.button, a.button:hover {
   background-color: #455A64;
 }
 
-.clear {
-  &.padding-left {
-    padding-left: 0;
-  }
-  &.padding-right {
-    padding-right: 0;
-  }
-  &.padding-top {
-    padding-top: 0;
-  }
-  &.padding-bottom {
-    padding-bottom: 0;
-  }
-}
-
-.overflow-auto {
-  overflow: auto;
-  background: #fff;
-}
-
-.margin-auto {
-  margin: 0 auto;
-}
-
-#intro {
-  max-height: 315px;
-  max-width: 415px;
-}
-
-#examples {
-  max-height: 315px;
-  max-width: 515px
-}
-
 /* header */
 header {
   padding: 2rem 0;
@@ -143,6 +109,7 @@ header {
   }
   & .top-bar-section .right li .dropdown {
     left: 0;
+    z-index: 300;
   }
   & .top-bar-section .dropdown li {
     margin: 0;
@@ -167,7 +134,6 @@ header {
 
 /* banner */
 .banner {
-  padding: 1rem 0 0;
   color: #fff;
   background: #1976D2;
   & .row {
@@ -177,8 +143,7 @@ header {
     color: #fff;
   }
   & h1 {
-    margin-top: 0.8rem;
-    font-size: 38px;
+    font-size: 36px;
     font-weight: 600;
     letter-spacing: -0.4px;
   }
@@ -218,7 +183,7 @@ header {
     color: #aaa;
   }
   & .breadcrumbs > * {
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 300;
     text-transform: none;
   }
@@ -226,12 +191,6 @@ header {
 
 .main .banner {
   padding: 6rem 0 0;
-}
-.examples .banner {
-  padding: 0;
-  > .row {
-    display: none;
-  }
 }
 
 /* What is Handsontable */
@@ -296,10 +255,11 @@ header {
   & i {
     width: 7rem;
     height: 7rem;
+    font-size: 3.4rem;
     line-height: 7rem;
     margin: 0 auto 1rem;
     border-radius: 100px;
-    border: 1px solid #c1c1c1;
+    border: 1px dashed #c1c1c1;
   }
 }
 
@@ -487,7 +447,6 @@ header {
   }
 }
 
-
 /* Try Handsontable */
 .try {
   padding: 1.5rem 0 1.2rem;
@@ -616,112 +575,157 @@ header {
 /* Examples */
 .examples-details {
   margin: 3rem 0;
-  & #example-filters .tabs {
+  & .tabs {
     margin-top: 3rem;
     padding: 0 5rem;
     display: inline-block;
     border-bottom: 1px solid #dfdfdf;
   }
-  & #example-filters .tabs dd {
+  & .tabs dd {
     top: 1px;
   }
-  & #example-filters .tabs dd.active {
-    border-bottom: 1px solid #fff;
-  }
-  & #example-filters .tabs dd > a {
+  & .tabs dd > a {
     padding: 0.7rem 2rem;
     color: #5f5f5f;
     font-size: 0.9rem;
     font-weight: 400;
+    box-shadow: inset 0px -1px 0px #dfdfdf;
     border-top: 1px solid #dfdfdf;
     border-right: 1px solid #dfdfdf;
   }
-  & #example-filters .tabs dd.active > a {
+  & .tabs dd.active > a {
     color: #07a6d1;
+    box-shadow: inset 0px -1px 0px #fff;
   }
-  & #example-filters .tabs dd:first-child > a {
+  & .tabs dd:first-child > a {
     border-left: 1px solid #dfdfdf;
   }
-  & #example-filters .tabs dd:not(.active) > a{
+  & .tabs dd:not(.active) > a{
     background-color: #fafafa;
   }
-  & #example-filters .tabs dd:not(.active) > a:hover {
+  & .tabs dd:not(.active) > a:hover {
     background-color: #f5f5f5;
   }
-  & #example-filters .tabs-content {
-    padding: 1.4rem 0 0;
-    text-align: center;
-    margin-bottom: 0;
-
-    .handsontable {
-      margin: 0 auto 1.4rem auto;
-    }
+  & .content {
+    padding: 0;
   }
-  & #example-filters .tabs-content .columns p {
-    margin-bottom: 0;
-  }
-  & #example-filters .tabs-content label {
-    margin-right: 0;
-    font-size: 0.8rem;
-    position: relative;
-    top: -2px;
+  & .content p {
+    margin-top: 2rem;
+    font-size: 12px;
   }
 }
 
-/* Help and support */
+/* Pricing */
 .pricing-details {
   margin: 3rem 0;
   & h3.shead {
     margin-bottom: 6rem;
   }
-  & .tooltip > .nub {
-    top: -9px;
+  & hr {
+    width: 13%;
   }
-  & .pricing-table {
-    overflow: hidden;
+  & .pgraph {
+    width: 80%;
+    text-align: justify;
   }
-  & .pricing-table .title {
-    padding: 1.5rem 1rem;
-    font-size: 1.3rem;
+  & .pricing-rate span {
+    margin-right: 1rem;
+    padding: 0.2rem 0.6rem;
+    font-size: 15px;
+    font-weight: 300;
     color: #fff;
-    font-family: "Open Sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif !important;
-    background-color: #3B93EA;
+    background: #8BC34A;
   }
-  & .pricing-table .price {
-    font-size: 1.5rem;
-    font-family: "Open Sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif !important;
-    border-bottom: 1px solid #ddd;
+  & #pricing-plans {
+    margin: 1rem 0 2rem;
   }
-  & .pricing-table.plan-2 {
+  & .tabs {
+    width: 100%;
+    padding: 0;
+    display: inline-block;
+    border-bottom: 1px solid #dfdfdf;
+  }
+  & .tabs dd {
+    width: 12.53%;
+    top: 1px;
+  }
+  & .tabs dd > a {
+    padding: 0.7rem 0;
+    color: #5f5f5f;
+    font-size: 0.9rem;
+    font-weight: 600;
+    box-shadow: inset 0px -1px 0px #dfdfdf;
+    border-top: 1px solid #dfdfdf;
+    border-right: 1px solid #dfdfdf;
+  }
+  & .tabs dd.active > a {
+    color: #07a6d1;
+    box-shadow: inset 0px -1px 0px #fff;
+  }
+  & .tabs dd:first-child > a {
+    border-left: 1px solid #dfdfdf;
+  }
+  & .tabs dd:not(.active) > a{
+    background-color: #fafafa;
+  }
+  & .tabs dd:not(.active) > a:hover {
+    background-color: #f5f5f5;
+  }
+  & .tabs-content {
+    padding: 1.4rem 0 0;
+    text-align: center;
+    margin-bottom: 0;
+  }
+  & .tabs-content .content {
+    padding-top: 0;
+  }
+  & .tabs-content li {
+    height: 6rem;
+    border: 1px solid #dfdfdf;
+    border-right: none;
+    border-top: none;
+  }
+  & .tabs-content li p {
+    margin: 0;
+    line-height: 1;
+    font-size: 14px;
+  }
+  & .tabs-content li p:first-child {
+    margin: 1.7rem 0 0.5rem;
+    font-size: 18px;
+    font-weight: 800;
+  }
+  & .tabs-content li p:last-child {
+    color: #797979;
+  }
+  & .tabs-content li:nth-child(4),
+  & .tabs-content li:nth-child(8) {
+    border-right: 1px solid #dfdfdf;
+  }
+  & .tabs-content .content ul {
+    margin: 0 auto;
+  }
+  & .tabs-content label {
+    margin-right: 0;
+    font-size: 0.8rem;
     position: relative;
-    top: -2rem;
+    top: -2px;
   }
-  & .pricing-table.plan-2 .title {
-    padding: 2.3rem 1rem;
-    font-size: 1.7rem;
-    background-color: #1976D2;
-  }
-  & .pricing-table .promo-badge {
-    position: absolute;
-    top: 35px;
-    padding: 0.4rem 2rem;
-    left: -40px;
-    font-weight: 300;
+  & .tabs-content .button {
+    padding: 0.8rem 2rem;
     color: #fff;
-    transform: rotate(-45deg);
-    background-color: #5AB803;
+    font-weight: 400;
+    border-radius: 0;
+    background: #607D8B;
   }
-  & .pricing-table .bullet-item p {
-    margin: 1rem;
+  & .tabs-content .button:hover {
+    background: #7597A8;
   }
-  & .more-options p {
-    font-weight: 300;
-  }
-  & .price-included h2, #main .price-faq h2 {
-    margin-bottom: 2.5rem;
+  & .tabs-content .button i {
+    margin-left: 10px;
   }
   & .price-faq h2 {
-    margin: 2rem 0 3rem;
+    margin: 1rem 0 4rem;
   }
   & .price-faq h3 {
     font-size: 1.2rem;

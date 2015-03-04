@@ -5,65 +5,170 @@ block variables
     page_class = "pricing"
     page_subclass = "subpage"
     title = "Pricing"
+    hourly_rate = "90"
     description = "Handsontable - JavaScript data grid editor. Excel-like grid editing with HTML & JavaScript"
 
 block content
     .pricing-details
         .row
             .large-12.columns.text-center
-                h2.mhead Unleash the potential of data
-                h3.shead with dedicated support for your next project
-                .row
-                    .large-4.medium-4.columns
-                        ul.pricing-table.plan-1
-                            li.title Open source
-                            li.price Free
-                            li.description For either private or commercial projects
-                            li.bullet-item Community support
-                            li.bullet-item Open source license
-                            li.bullet-item Fully featured
-                            li.bullet-item Well documented
-                            li.bullet-item Major browsers supported
-                            li.cta-button
-                                a.button(href="https://github.com/handsontable/handsontable/releases/latest", target="_blank") Download
-                    .large-4.medium-4.columns
-                        ul.pricing-table.plan-2
-                            .promo-badge.show-for-large-only Recommended
-                            li.title Startup
-                            li.price $2199
-                            li.description Perfect for midsize teams and startups
-                            li.bullet-item
-                                strong.has-tip(data-tooltip="", aria-haspopup="true", data-options="disable_for_touch:true", title="All requests are billed in 15-minute increments") 30 hours of support
-                            li.bullet-item Custom license
-                            li.bullet-item 12h initial response time
-                            li.bullet-item Current version supported
-                            li.bullet-item Monthly fee
-                            li.cta-button
-                                a.button(href="/contact-us.html") Contact us
-                    .large-4.medium-4.columns
-                        ul.pricing-table.plan-3
-                            li.title Enterprise
-                            li.price Contact us
-                            li.description For demanding IT departments
-                            li.bullet-item
-                                strong Full-time support
-                            li.bullet-item Custom license
-                            li.bullet-item Custom response time
-                            li.bullet-item All versions supported
-                            li.bullet-item Monthly fee
-                            li.cta-button
-                                a.button(href="/contact-us.html") Contact us
-                .row.text-center.more-options
-                    p
-                        | Interested in one-time payment with unlimited use and a license other than MIT? #{""}
-                        a(href="/contact-us.html") Let us know
+                ul.large-block-grid-2.medium-block-grid-2.small-block-grid-1
+                    li.text-left
+                        h2.mhead Support services
+                        hr
+                        p.pgraph
+                            span
+                                | At #{""}
+                                a(href="/about-us.html") Handsoncode #{""}
+                                | we do understand the importance of your data.
+                                | That's why our engineers are always ready to go the extra mile to get your app done.
+                                | You get a proactive guidance from an assigned assistant along with priority support.
+                                | Since we expertize in data grids and visualization software we can teach your team
+                                | how to deliver great results faster.
+                                p.pgraph
+                                    strong There is a story behind every idea. Let us hear yours.
+                        p.pricing-rate
+                            span Hourly rate: $#{hourly_rate}
+                            span Daily rate: $#{hourly_rate*8}
+                    li.text-left
+                        h2.mhead Custom license
+                        hr
+                        p.pgraph
+                            span
+                                | Handsontable is free and always will be. However, if you need a license other than MIT to
+                                | reserve more rights to your copy of the software we can offer you a custom license tailored individually.
+                                | The commercial license comes without a support but allows
+                                | you to incorporate Handsontable into your software without reffering to us in the license.
+                                | If you need more details, just #{""}
+                                a(href="contact-us.html") contact us.
+                #pricing-plans.text-center.clearfix
+                    .show-for-small-only.text-left
+                        h2.mhead Our plans
+                        hr
+                    dl.tabs.left(data-tab="")
+                        dd.active(name="Indie")
+                            a(href="#panel-1") Indie
+                        dd(name="Small")
+                            a(href="#panel-2") Small
+                        dd(name="Medium")
+                            a(href="#panel-3") Medium
+                        dd(name="Enterprise")
+                            a(href="#panel-4") Enterprise
+                    .tabs-content
+                        #panel-1.content.active(aria-hidden="false")
+                            ul.large-block-grid-4.medium-block-grid-4.small-block-grid-1
+                                li
+                                    p 3
+                                    p Hours/month
+                                li
+                                    p 3 months
+                                    p Minimum commitment
+                                li
+                                    p 10%
+                                    p Consultancy discount
+                                li
+                                    p 24h
+                                    p Response time
+                                li
+                                    p 1
+                                    p Named contacts
+                                li
+                                    p No
+                                    p Custom license
+                                li
+                                    p Current
+                                    p Version supported
+                                li
+                                    p No
+                                    p Kick-off meeting
+                        #panel-2.content
+                            ul.large-block-grid-4.medium-block-grid-3.small-block-grid-1
+                                li
+                                    p 20
+                                    p Hours/month
+                                li
+                                    p 4 months
+                                    p Minimum commitment
+                                li
+                                    p 15%
+                                    p Consultancy discount
+                                li
+                                    p 12h
+                                    p Response time
+                                li
+                                    p 3
+                                    p Named contacts
+                                li
+                                    p Yes
+                                    p Custom license
+                                li
+                                    p Current
+                                    p Version supported
+                                li
+                                    p Yes
+                                    p Kick-off meeting
+                        #panel-3.content
+                            ul.large-block-grid-4.medium-block-grid-3.small-block-grid-1
+                                li
+                                    p 40
+                                    p Hours/month
+                                li
+                                    p 6 months
+                                    p Minimum commitment
+                                li
+                                    p 20%
+                                    p Consultancy discount
+                                li
+                                    p 8h
+                                    p Response time
+                                li
+                                    p 1
+                                    p Named contacts
+                                li
+                                    p Yes
+                                    p Custom license
+                                li
+                                    p All
+                                    p Versions supported
+                                li
+                                    p Yes
+                                    p Kick-off meeting
+                        #panel-4.content
+                            ul.large-block-grid-4.medium-block-grid-3.small-block-grid-1
+                                li
+                                    p Unlimited
+                                    p Hours/month
+                                li
+                                    p 12 months
+                                    p Minimum commitment
+                                li
+                                    p 25%
+                                    p Consultancy discount
+                                li
+                                    p < 8h
+                                    p Response time
+                                li
+                                    p Unlimited
+                                    p Named contacts
+                                li
+                                    p Yes
+                                    p Custom license
+                                li
+                                    p All
+                                    p Versions supported
+                                li
+                                    p Yes
+                                    p Kick-off meeting
+                        a.button.left(href="/contact-us.html") Get in touch #{""}
+                            i.fa.fa-chevron-right
+                        img.right(src="#{data.baseUrl}images/paypal-badge.png", alt="PayPal options")
                 .row.text-center.price-faq
                     h2.mhead Frequently Asked Questions
                     .large-10.large-centered.columns
                         .large-5.medium-5.columns.text-left
                             h3 Can I use Handsontable for free?
                             p
-                                | Sure, feel free to download the latest version from our #{""}
+                                | Of course, feel free to download the latest version from our #{""}
                                 a(href="https://github.com/handsontable/handsontable", target="_blank") GitHub repository #{""}
                                     i.fa.fa-external-link
                             h3 Are there any additional costs?
@@ -72,13 +177,8 @@ block content
                             h3 What is the license of Handsontable?
                             p
                                 | It is released under #{""}
-                                a(href="http://en.wikipedia.org/wiki/MIT_License", target="_blank") the MIT license #{""}
-                                    i.fa.fa-external-link
-                                | #{""}
+                                a(href="/licensing.html") the MIT license #{""}
                                 | so feel free to use our data grid in either private or commercial projects.
-                            h3 I need a different license
-                            p
-                                | Although we have ready-for-purchase custom licenses other than MIT you can propose your own terms and conditions, we can be flexible.
                             h3 Can I use Handsontable in many projects?
                             p The number of websites and projects in which you can use Handsontable is unlimited.
                             h3 Do you provide a staging server during work?
@@ -98,7 +198,7 @@ block content
                                 | Yes, you can use your monthly hour limit to let us upgrade your implementation of Handsontable. If the estimated effort goes beyond your plan, we can still help you, in which case simply contact us.
                             h3 Can you develop a new feature for me?
                             p
-                                | Yes, we'll tailor Handsontable to your needs. If the estimated workload exceeds your pricing plan we go with an hourly rate of 60$.
+                                | Yes, we'll tailor Handsontable to your needs. If the estimated workload exceeds your pricing plan we go with an hourly rate of $#{hourly_rate}.
                             h3 How do you provide time-tracking and reports?
                             p
                                 | We use #{""}
@@ -106,7 +206,3 @@ block content
                                     i.fa.fa-external-link
                                 | #{""}
                                 | to keep up with tasks and projects. We'll set up accounts for members of your organization.
-        .price-contact.row-grey.text-center
-            .row
-                h2 Contact our sales team
-                a.button(href="/contact-us.html") Get in touch

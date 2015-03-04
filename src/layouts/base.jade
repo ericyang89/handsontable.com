@@ -7,6 +7,7 @@ html
             - var page_subclass = page_subclass || " "
             - var title = title || "undefined"
             - var description = description || "undefined"
+
         title #{title} #{""}
             | | Handsontable - JavaScript data grid editor. Excel-like grid editing with HTML & JavaScript
         meta(charset="utf-8")
@@ -16,14 +17,14 @@ html
         script(src="#{data.baseUrl}bower_components/foundation/js/vendor/modernizr.js")
         link(href="#{data.baseUrl}styles/main.css", rel="stylesheet")
         link(href="#{data.baseUrl}bower_components/handsontable/dist/handsontable.full.min.css", rel="stylesheet")
+        link(href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700);", rel="stylesheet")
+
     body(class="#{page_class} #{page_subclass}")
         header
             block navigation
                 include ../pages/_menu.jade
         .banner
             block banner
-                .row
-                    h3 #{page_name}
                 nav.show-for-medium-up
                     .row
                         .breadcrumbs
