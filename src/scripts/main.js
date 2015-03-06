@@ -523,7 +523,7 @@ var HT = (function () {
 
       Handsontable.Dom.addEvent(document.querySelector('#load-data'), 'click', function () {
         HT.scrollSmooth('header', function () {
-          var data = Handsontable.helper.createSpreadsheetData(1000, 7);
+          var data = Handsontable.helper.createSpreadsheetData(10000, 7);
           hotInstances['index'].loadData(data);
 
           hotInstances['index'].addHookOnce('afterLoadData', function () {
@@ -536,7 +536,7 @@ var HT = (function () {
               //  hotInstances['index'].selectCell(9999, 0);
               //});
 
-              hotInstances['index'].selectCell(999, 0);
+              hotInstances['index'].selectCell(9999, 0);
             }, 500);
 
           });

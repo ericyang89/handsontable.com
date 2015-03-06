@@ -21,12 +21,10 @@ block content
                                 | At #{""}
                                 a(href="/about-us.html") Handsoncode #{""}
                                 | we do understand the importance of your data.
-                                | That's why our engineers are always ready to go the extra mile to get your app done.
+                                | That's why we are always ready to go the extra mile to get your app done.
                                 | You get a proactive guidance from an assigned assistant along with priority support.
                                 | Since we expertize in data grids and visualization software we can teach your team
                                 | how to deliver great results faster.
-                                p.pgraph
-                                    strong There is a story behind every idea. Let us hear yours.
                         p.pricing-rate
                             span Hourly rate: $#{hourly_rate}
                             span Daily rate: $#{hourly_rate*8}
@@ -82,7 +80,7 @@ block content
                                     p No
                                     p Kick-off meeting
                         #panel-2.content
-                            ul.large-block-grid-4.medium-block-grid-3.small-block-grid-1
+                            ul.large-block-grid-4.medium-block-grid-4.small-block-grid-1
                                 li
                                     p 20
                                     p Hours/month
@@ -108,7 +106,7 @@ block content
                                     p Yes
                                     p Kick-off meeting
                         #panel-3.content
-                            ul.large-block-grid-4.medium-block-grid-3.small-block-grid-1
+                            ul.large-block-grid-4.medium-block-grid-4.small-block-grid-1
                                 li
                                     p 40
                                     p Hours/month
@@ -134,7 +132,7 @@ block content
                                     p Yes
                                     p Kick-off meeting
                         #panel-4.content
-                            ul.large-block-grid-4.medium-block-grid-3.small-block-grid-1
+                            ul.large-block-grid-4.medium-block-grid-4.small-block-grid-1
                                 li
                                     p Unlimited
                                     p Hours/month
@@ -161,48 +159,49 @@ block content
                                     p Kick-off meeting
                         a.button.left(href="/contact-us.html") Get in touch #{""}
                             i.fa.fa-chevron-right
-                        img.right(src="#{data.baseUrl}images/paypal-badge.png", alt="PayPal options")
-                .row.text-center.price-faq
-                    h2.mhead Frequently Asked Questions
-                    .large-10.large-centered.columns
-                        .large-5.medium-5.columns.text-left
-                            h3 Can I use Handsontable for free?
-                            p
-                                | Of course, feel free to download the latest version from our #{""}
-                                a(href="https://github.com/handsontable/handsontable", target="_blank") GitHub repository #{""}
-                                    i.fa.fa-external-link
-                            h3 Are there any additional costs?
-                            p
-                                | Absolutely no hidden costs or legal tricks. We strive to be as transparent as possible.
-                            h3 What is the license of Handsontable?
-                            p
-                                | It is released under #{""}
-                                a(href="/licensing.html") the MIT license #{""}
-                                | so feel free to use our data grid in either private or commercial projects.
-                            h3 Can I use Handsontable in many projects?
-                            p The number of websites and projects in which you can use Handsontable is unlimited.
-                            h3 Do you provide a staging server during work?
-                            p
-                                | Every project is specific so we don't have a single pattern on how we test and publish our work. You can provide us with access to your dev enviroment but it's not a requirement.
-                            h3 How do I get in touch with you?
-                            p
-                                | Depending on which pricing plan you choose, we can support you by email, phone, Skype, Google Hangouts or ticketing system.
-                        .large-5.medium-5.columns.text-left
-                            h3 How many issues can I report?
-                            p There are absolutely no limits in the number of issues that can be reported.
-                            h3 Do my unused support hours rollover to the next month?
-                            p
-                                | Yes, your unused hours remain accumulated for up to 6 months. You'll get from us an access to a ticketing system where you see hours spent on issues on an ongoing basis.
-                            h3 Can you help me with upgrading Handsontable to the newest version?
-                            p
-                                | Yes, you can use your monthly hour limit to let us upgrade your implementation of Handsontable. If the estimated effort goes beyond your plan, we can still help you, in which case simply contact us.
-                            h3 Can you develop a new feature for me?
-                            p
-                                | Yes, we'll tailor Handsontable to your needs. If the estimated workload exceeds your pricing plan we go with an hourly rate of $#{hourly_rate}.
-                            h3 How do you provide time-tracking and reports?
-                            p
-                                | We use #{""}
-                                a(href="https://redbooth.com", target="_blank") RedBooth #{""}
-                                    i.fa.fa-external-link
-                                | #{""}
-                                | to keep up with tasks and projects. We'll set up accounts for members of your organization.
+                        img.paypal-badge(src="#{data.baseUrl}images/paypal-badge.png", alt="PayPal options")
+                .row.price-faq
+                    h2.mhead.text-center Frequently Asked Questions
+                    .small-10.small-centered.columns.text-left
+                        .row
+                            .large-5.medium-5.columns
+                                h3 Can I use Handsontable for free?
+                                p
+                                    | Of course, feel free to download the latest version from our #{""}
+                                    a(href="https://github.com/handsontable/handsontable", target="_blank") GitHub repository #{""}
+                                        i.fa.fa-external-link
+                                h3 Are there any additional costs?
+                                p
+                                    | Absolutely no hidden costs or legal tricks. We strive to be as transparent as possible.
+                                h3 What is the license of Handsontable?
+                                p
+                                    | It is released under #{""}
+                                    a(href="/licensing.html") the MIT license #{""}
+                                    | so feel free to use our data grid in either private or commercial projects.
+                                h3 Can I use Handsontable in many projects?
+                                p The number of websites and projects in which you can use Handsontable is unlimited.
+                                h3 Do you provide a staging server during work?
+                                p
+                                    | Every project is specific so we don't have a single pattern on how we test and publish our work. You can provide us with access to your dev enviroment but it's not a requirement.
+                                h3 How do I get in touch with you?
+                                p
+                                    | Depending on which pricing plan you choose, we can support you by email, phone, Skype, Google Hangouts or ticketing system.
+                            .large-5.medium-5.columns
+                                h3 How many issues can I report?
+                                p There are absolutely no limits in the number of issues that can be reported.
+                                h3 Do my unused support hours rollover to the next month?
+                                p
+                                    | Yes, your unused hours remain accumulated for up to 6 months. You'll get from us an access to a ticketing system where you see hours spent on issues on an ongoing basis.
+                                h3 Can you help me with upgrading Handsontable to the newest version?
+                                p
+                                    | Yes, you can use your monthly hour limit to let us upgrade your implementation of Handsontable. If the estimated effort goes beyond your plan, we can still help you, in which case simply contact us.
+                                h3 Can you develop a new feature for me?
+                                p
+                                    | Yes, we'll tailor Handsontable to your needs. If the estimated workload exceeds your pricing plan we go with an hourly rate of $#{hourly_rate}.
+                                h3 How do you provide time-tracking and reports?
+                                p
+                                    | We use #{""}
+                                    a(href="https://redbooth.com", target="_blank") RedBooth #{""}
+                                        i.fa.fa-external-link
+                                    | #{""}
+                                    | to keep up with tasks and projects. We'll set up accounts for members of your organization.

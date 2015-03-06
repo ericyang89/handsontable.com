@@ -1,11 +1,6 @@
-.row {
-  @media #{$medium} {
-    max-width: 75em;
-  }
-}
 header {
   @media #{$small-only} {
-    padding: 0.865rem 0;
+    padding: 0.875rem 0;
     .name img {
       margin: 0 1rem;
     }
@@ -16,8 +11,17 @@ header {
       left: 104%;
     }
   }
+  @media #{$medium-only} {
+    .name img {
+      max-width: 147px;
+    }
+    & .top-bar-section ul li {
+      margin: 0 0.3rem;
+    }
+    & .top-bar-section ul li a {
+      font-size: 13px!important;
+    }
   & .top-bar-section li:not(.has-form) a:not(.button) {
-    @media #{$medium-only} {
       padding: 0 0.5rem;
     }
   }
@@ -30,27 +34,38 @@ header {
 .banner {
   @media #{$small-only} {
     padding: 0;
-    h3 {
-      font-size: 24px;
+    text-align: center;
+  }
+  @media #{$medium-only} {
+    padding: 0;
+    text-align: center;
+    h1 {
+      font-size: 46px;
+    }
+    h2 {
+      font-size: 22px;
     }
   }
 }
 .main .banner {
   @media #{$small-only} {
     padding: 1rem 0 3rem;
-  }
-  @media #{$medium-only} {
-    padding: 4rem 0 6rem;
-  }
-  & h1 {
-    @media #{$small-only} {
-      font-size: 29px;
+    & h1 {
+      font-size: 36px;
     }
-  }
-  & .download {
-    @media #{$small-only} {
+    & h2 {
+      margin: 1rem 0 2rem;
+    }
+    & .download {
       margin-top: 1rem;
     }
+    & .banner-buttons .button {
+      width: 100%;
+      border-color: #fff;
+    }
+  }
+  @media #{$medium-only} {
+    padding: 4rem 0 7rem;
   }
 }
 .what-is {
@@ -66,9 +81,7 @@ header {
 .flavors {
   @media #{$small-only} {
     padding: 3rem 0 2rem;
-  }
-  & li {
-    @media #{$small-only} {
+    & li {
       margin: 1rem 0;
     }
   }
@@ -84,9 +97,7 @@ header {
 .clients {
   @media #{$small-only} {
     padding: 3rem 0 1rem;
-  }
-  & h2 {
-    @media #{$small-only} {
+    & h2 {
       margin-bottom: 1rem;
     }
   }
@@ -109,9 +120,12 @@ header {
     }
   }
 }
-.feature-details {
+.features-details {
   @media #{$small-only} {
     margin: 2rem 0 0;
+  }
+  & ul {
+    margin-top: 4rem;
   }
 }
 .licensing-details {
@@ -143,6 +157,11 @@ header {
       border-left: 1px solid #dfdfdf;
     }
   }
+  @media #{$medium-only} {
+    & .tabs {
+      padding: 0 1rem;
+    }
+  }
 }
 .pricing-details {
   @media #{$small-only} {
@@ -166,8 +185,14 @@ header {
     & .tabs dd:nth-child(1) > a, & .tabs dd:nth-child(3) > a {
       border-left: 1px solid #dfdfdf;
     }
+    & .tabs-content img.paypal-badge {
+      float: none;
+    }
     & .tabs-content li {
       border-right: 1px solid #dfdfdf;
+    }
+    & .tabs-content .button {
+      width: 100%;
     }
     & #pricing-plans {
       margin-top: 0;
@@ -177,12 +202,18 @@ header {
     }
   }
   @media #{$medium-only} {
-      & .pgraph {
-        width: 90%;
-      }
     & .tabs dd {
       width: 18%;
     }
+  }
+}
+
+.support-details {
+  @media #{small-only} {
+    margin: 2rem 0 0;
+  }
+  & ul {
+    margin-top: 4rem;
   }
 }
 .plain-details {

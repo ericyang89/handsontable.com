@@ -11,6 +11,9 @@ a, a:visited, a:hover, a:visited:hover {
   color: #037BD2;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif!important;
 }
+.row {
+  max-width: 75em;
+}
 i.fa-external-link {
   font-size: 11px;
 }
@@ -83,10 +86,10 @@ header {
      transition: none!important;
    }
   & .top-bar-section li:not(.has-form) a:not(.button) {
-    padding: 0 0.865rem;
+    padding: 0 0.875rem;
   }
   & nav.expanded .top-bar-section li:not(.has-form) a:not(.button) {
-    padding: .26rem 0.865rem;
+    padding: .26rem 0.875rem;
   }
   & .top-bar.expanded .toggle-topbar a span::after {
     opacity: 0.5;
@@ -96,7 +99,7 @@ header {
     margin-top: 2rem;
   }
   & .top-bar-section ul li {
-    margin: 0 0.865rem;
+    margin: 0 0.875rem;
   }
   & .top-bar-section ul li a {
     line-height: 36px!important;
@@ -134,6 +137,10 @@ header {
 
 /* banner */
 .banner {
+  /* ICS devices + Chrome bug fix */
+  position: relative;
+  top: -1px;
+
   color: #fff;
   background: #1976D2;
   & .row {
@@ -158,7 +165,7 @@ header {
   }
   & .banner-buttons .button {
     margin: 2rem 1rem 0 0;
-    padding: 0.8rem 2rem 0.865rem 2rem;
+    padding: 0.8rem 2rem 0.875rem 2rem;
     border-radius: 0;
     border: 1px solid #9AD1F9;
     background: none;
@@ -458,12 +465,12 @@ header {
   & .button {
     margin-top: 14px;
     font-size: 18px;
-    border: 1px solid #5AB803;
-    background-color: #5AB803;
+    border: 1px solid #FF3D00;
+    background-color: #FF3D00;
   }
   & .button:hover {
-    background-color: #63BD0F;
-    border-color: #63BD0F;
+    background-color: #FF5722;
+    border-color: #FF5722;
   }
 }
 
@@ -532,7 +539,7 @@ header {
 
 /* Features */
 .features-details {
-  padding: 3rem 0;
+  margin: 3rem 0;
   & h4 {
     margin: 1rem 0;
     font-size: 1.2rem;
@@ -625,7 +632,7 @@ header {
     width: 13%;
   }
   & .pgraph {
-    width: 80%;
+    width: 90%;
     text-align: justify;
   }
   & .pricing-rate span {
@@ -711,6 +718,9 @@ header {
     position: relative;
     top: -2px;
   }
+  & .tabs-content img.paypal-badge {
+    float: right;
+  }
   & .tabs-content .button {
     padding: 0.8rem 2rem;
     color: #fff;
@@ -744,6 +754,30 @@ header {
     margin-bottom: 1rem;
     font-size: 34px;
     color: #393939;
+  }
+}
+
+/* Features */
+.support-details {
+  margin: 3rem 0;
+  & h4 {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+  }
+  & ul {
+    margin: 5rem 0 0;
+  }
+  & ul li {
+    margin-bottom: 2rem;
+  }
+  & ul li p {
+    margin: 0 auto;
+    width: 80%;
+    font-size: 15px;
+    font-weight: 300;
+  }
+  & .fa-4x {
+    color: #8c8c8c;
   }
 }
 
@@ -803,7 +837,7 @@ header {
     font-size: 13px;
   }
   & ul li.heading p {
-    margin-bottom: 0.865rem;
+    margin-bottom: 0.875rem;
     font-weight: 400;
     font-size: 13px;
   }
