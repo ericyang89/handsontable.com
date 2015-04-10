@@ -13,11 +13,13 @@ block navigation
                 ul.right
                     li.has-dropdown
                         a(href="/about-us.html") About project
-                        ul.dropdown
-                            li.left
-                                a(href="/features.html", class="features-el") Features
-                                a(href="/licensing.html", class="licensing-el") Licensing
-                                a(href="/about-us.html", class="about-el") About us
+                        ul.dropdown.left
+                            li
+                              a(href="/features.html", class="features-el") Features
+                            li
+                              a(href="/licensing.html", class="licensing-el") Licensing
+                            li
+                              a(href="/about-us.html", class="about-el") About us
                     li
                         a(href="/examples.html", class="examples-el") Examples
                     li
@@ -26,11 +28,15 @@ block navigation
                         a(href="/pricing.html", class="pricing-el") Pricing
 
                     li.has-dropdown
-                        a(href="/help-and-support.html", class="support-el") Help and Support
-                        ul.dropdown
-                            li.left
-                                a(href="https://github.com/handsontable/handsontable/issues", target="_blank") GitHub issues
-                                a(href="https://groups.google.com/forum/#!forum/handsontable", target="_blank") Google Group
-                                a(href="http://stackoverflow.com/questions/tagged/handsontable", target="_blank") Stack Overflow
-                                a(href="/contact-us.html", class="contact-el") Consultancy
-                                a(href="https://twitter.com/handsontable", target="_blank") Twitter
+                        a(href="/help-and-support.html", class="support-el", data-dropdown="helpSupport", data-options="is_hover:true; hover_timeout:1000") Help and Support
+                        ul(id="helpSupport", class="dropdown left", data-dropdown-content)
+                          li
+                            a(href="https://github.com/handsontable/handsontable/issues", target="_blank") GitHub issues
+                          li
+                            a(href="https://groups.google.com/forum/#!forum/handsontable", target="_blank") Google Group
+                          li
+                            a(href="http://stackoverflow.com/questions/tagged/handsontable", target="_blank") Stack Overflow
+                          li
+                            a(href="/contact-us.html", class="contact-el") Consultancy
+                          li
+                            a(href="https://twitter.com/handsontable", target="_blank") Twitter

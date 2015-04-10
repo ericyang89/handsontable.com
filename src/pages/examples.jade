@@ -16,37 +16,37 @@ block content
                     a(href="") Get started #{""}
                     | and deploy apps with ease
                 #example-filters.text-center
-                    dl.tabs(data-tab="")
-                        dd.active(name="examples")
-                            a(href="#panel-1") Basic
+                    dl.tabs(data-tab="", data-options="deep_linking:true; scroll_to_content:false")
+                        dd.active(name="basic")
+                            a(href="#basic") Basic
                         dd(name="advanced")
-                            a(href="#panel-2") Advanced
+                            a(href="#advanced") Advanced
                         dd(name="personal")
-                            a(href="#panel-3") Personal
+                            a(href="#personal") Personal
                         dd(name="finance")
-                            a(href="#panel-4") Finance
+                            a(href="#finance") Finance
                         dd(name="science")
-                            a(href="#panel-5") Science
+                            a(href="#science") Science
                         dd(name="sport")
-                            a(href="#panel-6") Sport
+                            a(href="#sport") Sport
                     .tabs-content
                         #examples
 
-                        #panel-1.content
-                        #panel-2.content
+                        #basic.content
+                        #advanced.content
                             p Source of data: #{""}
                                 a(href="https://www.quandl.com/c/demography/total-population-by-country", target="_blank") https://www.quandl.com/c/demography/total-population-by-country #{""}
                                     i.fa.fa-external-link
-                        #panel-3.content
-                        #panel-4.content
+                        #personal.content
+                        #finance.content
                             p Source of data: #{""}
                                 a(href="https://www.quandl.com/c/markets/bitcoin-data", target="_blank") https://www.quandl.com/c/markets/bitcoin-data #{""}
                                     i.fa.fa-external-link
-                        #panel-5.content
+                        #science.content
                             p Source of data: #{""}
                                 a(href="https://plot.ly/~JStevens/0/an-age-distribution-for-scientific-genius", target="_blank") https://plot.ly/~JStevens/0/an-age-distribution-for-scientific-genius #{""}
                                     i.fa.fa-external-link
-                        #panel-6.content
+                        #sport.content
                             p Source of data: #{""}
                                 a(href="http://www.forbes.com/nba-valuations/list", target="_blank") http://www.forbes.com/nba-valuations/list  #{""}
                                     i.fa.fa-external-link

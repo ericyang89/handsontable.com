@@ -1,6 +1,10 @@
 module.exports = function (grunt) {
 
   grunt.initConfig({
+    bowerJson: grunt.file.readJSON('bower.json'),
+    ruleJS: {
+
+    },
     pages: {
       posts: {
         src: 'posts',
@@ -10,6 +14,7 @@ module.exports = function (grunt) {
         options: {
           pageSrc: 'src/pages',
           data: {
+            hotVersion: '<%= bowerJson.dependencies.handsontable %>',
             baseUrl: '/'
           },
           pagination: {
@@ -60,7 +65,12 @@ module.exports = function (grunt) {
               'jquery.cookie': 'jquery.cookie',
               'jquery-placeholder': 'jquery-placeholder',
               'modernizr': 'modernizr',
-              'handsontable': 'handsontable'
+              'handsontable': 'handsontable',
+              'pikaday': 'pikaday',
+              'moment': 'moment',
+              'chroma-js': 'chroma-js',
+              'ruleJS': 'ruleJS',
+              'handsontable-ruleJS': 'handsontable-ruleJS'
           }
       }
     },
@@ -177,4 +187,6 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-bowercopy');
   grunt.loadNpmTasks('grunt-robots-txt');
   grunt.loadNpmTasks('grunt-xml-sitemap');
+  grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-concat');
 };

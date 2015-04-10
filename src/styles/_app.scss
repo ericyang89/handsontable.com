@@ -76,55 +76,55 @@ a.button, a.button:hover {
 header {
   padding: 2rem 0;
   background: #1976D2;
-  & .name img {
+  .name img {
     max-width: 181px;
     margin: 0 1rem;
   }
   nav.top-bar, .top-bar-section ul, .top-bar-section ul li, .top-bar-section ul li a,
-   & .top-bar-section ul li, & .top-bar-section ul li a, & .top-bar.expanded .title-area {
+   .top-bar-section ul li, .top-bar-section ul li a, .top-bar.expanded .title-area {
      background: transparent!important;
      transition: none!important;
    }
-  & .top-bar-section li:not(.has-form) a:not(.button) {
+  .top-bar-section li:not(.has-form) a:not(.button) {
     padding: 0 0.875rem;
   }
-  & nav.expanded .top-bar-section li:not(.has-form) a:not(.button) {
+  nav.expanded .top-bar-section li:not(.has-form) a:not(.button) {
     padding: .26rem 0.875rem;
   }
-  & .top-bar.expanded .toggle-topbar a span::after {
+  .top-bar.expanded .toggle-topbar a span::after {
     opacity: 0.5;
     box-shadow: 0 0 0 1px #fff, 0 7px 0 1px #fff, 0 14px 0 1px #fff;
   }
-  & nav.expanded .top-bar-section {
+  nav.expanded .top-bar-section {
     margin-top: 2rem;
   }
-  & .top-bar-section ul li {
+  .top-bar-section ul li {
     margin: 0 0.875rem;
   }
-  & .top-bar-section ul li a {
+  .top-bar-section ul li a {
     line-height: 36px!important;
     font-size: 14px!important;
     font-weight: 300!important;
   }
-  & .top-bar-section ul > li:hover a {
+  .top-bar-section ul > li:hover a {
     padding: 0;
     box-shadow: 0 0 1px #fff inset;
   }
-  & .top-bar-section .right li .dropdown {
+  .top-bar-section .right li .dropdown {
     left: 0;
     z-index: 300;
   }
-  & .top-bar-section .dropdown li {
+  .top-bar-section .dropdown li {
     margin: 0;
   }
-  & .top-bar-section ul .dropdown li a {
+  .top-bar-section ul .dropdown li a {
     font-size: 13px!important;
     background-color: #1976D2!important;
   }
-  & .top-bar-section ul .has-dropdown > a:after {
+  .top-bar-section ul .has-dropdown > a:after {
     margin-top: -7px;
   }
-  & .top-bar-section h5 {
+  .top-bar-section h5 {
     opacity: 0.7;
   }
 }
@@ -133,6 +133,7 @@ header {
 .main .overview-el, .about .dropdown .about-el, .features .dropdown .features-el, .licensing .dropdown .licensing-el,
 .examples .examples-el, .pricing .pricing-el, .support .support-el, .contact-us  .dropdown .contact-el {
   background-color: #1A84E0!important;
+  box-shadow: rgb(255, 255, 255) 0 0 1px 0 inset;
 }
 
 /* banner */
@@ -143,53 +144,53 @@ header {
 
   color: #fff;
   background: #1976D2;
-  & .row {
+  .row {
     padding: 0 1.5rem;
   }
-  & h1, & h2 {
+  h1, h2 {
     color: #fff;
   }
-  & h1 {
+  h1 {
     font-size: 36px;
     font-weight: 600;
     letter-spacing: -0.4px;
   }
-  & h2 {
+  h2 {
     font-size: 19px;
     font-weight: 300;
   }
-  & h3 {
+  h3 {
     font-size: 26px;
     font-weight: 300;
     color: #fff;
   }
-  & .banner-buttons .button {
+  .banner-buttons .button {
     margin: 2rem 1rem 0 0;
     padding: 0.8rem 2rem 0.875rem 2rem;
     border-radius: 0;
     border: 1px solid #9AD1F9;
     background: none;
   }
-  & .banner-buttons .button.download {
+  .banner-buttons .button.download {
     padding-left: 3.6rem;
     padding-right: 1.5rem;
     background: transparent url(../images/download-hot.png) no-repeat 18px 50%;
   }
-  & .banner-buttons .button:hover {
+  .banner-buttons .button:hover {
     background-color: #1A84E0;
   }
-  & nav, & .breadcrumbs {
+  nav, .breadcrumbs {
     border: none;
     background-color: #f2f2f2;
   }
-  & .breadcrumbs {
+  .breadcrumbs {
     padding: 0.625rem 0;
     font-size: 0.9231rem;
   }
-  & .breadcrumbs span {
+  .breadcrumbs span {
     color: #aaa;
   }
-  & .breadcrumbs > * {
+  .breadcrumbs > * {
     font-size: 12px;
     font-weight: 300;
     text-transform: none;
@@ -202,64 +203,74 @@ header {
 
 /* What is Handsontable */
 .what-is {
-  & .col-left, & .col-right {
+  .col-left, .col-right {
     padding: 4rem 0 4rem 0.9375rem;
   }
-  & .col-left h2 {
+  .col-left h2 {
     color: #393939;
     font-size: 30px;
     font-weight: 300;
   }
-  & .col-left hr {
+  .col-left hr {
     width: 13%;
   }
-  & p {
+  p {
     font-size: 15px;
     font-weight: 300;
   }
-  & .col-left p {
+  .col-left p {
     text-align: justify;
     width: 95%;
   }
-  & .col-left .social-buttons iframe {
+  .col-left .social-buttons iframe {
     margin-right: 1.1rem;
   }
-  & .col-left .social-buttons iframe:first-child {
+  .col-left .social-buttons iframe:first-child {
     margin-right: 0;
   }
-  & .col-right {
+  .col-right {
     padding-top: 6rem;
   }
-  & .col-right p {
+  .col-right p {
     font-weight: 400;
   }
-  & .col-right a {
+  .col-right a {
     padding: 0.8rem 2rem;
     color: #fff;
     font-weight: 400;
     border-radius: 0;
     background: #607D8B;
   }
-  & .col-right a:hover {
-    background: #7597A8;
+  .col-right a {
+      &:not(.disabled) {
+        &:hover {
+          background: #7597A8;
+        }
+      }
+
+      &.disabled {
+        &:hover {
+          background: #607D8B;
+        }
+      }
   }
 }
 
 /* Circles */
 .circles {
   padding: 2.5rem 0;
-  & li {
+  li {
     padding-bottom: 0;
   }
-  & h3 {
+  h3 {
     font-size: 16px;
     font-weight: 400;
   }
-  & p {
+  p {
     font-size: 14px;
     font-weight: 300;
   }
-  & i {
+  i {
     width: 7rem;
     height: 7rem;
     font-size: 3.4rem;
@@ -273,11 +284,11 @@ header {
 /* Many flavors */
 .flavors {
   padding: 4rem 0 5rem;
-  & h2 {
+  h2 {
     font-size: 28px;
     font-weight: 400;
   }
-  & h3 {
+  h3 {
     margin-bottom: 3rem;
     font-size: 18px;
     font-weight: 300;
@@ -288,30 +299,30 @@ header {
 .testimonials {
   padding: 2.5rem 0;
   color: #fff;
-  & .pricing-testimonial {
+  .pricing-testimonial {
       margin: 0 auto 1rem;
   }
-  & .orbit-bullets {
+  .orbit-bullets {
       opacity: 0.4;
       margin-bottom: 0.5rem;
   }
-  & .orbit-timer {
+  .orbit-timer {
       display: none;
   }
-  & .pricing-testimonial p {
+  .pricing-testimonial p {
       margin: 0;
       padding: 0;
       font-size: 0.9rem;
   }
-  & .pricing-testimonial p.t-txt {
+  .pricing-testimonial p.t-txt {
       font-size: 2rem;
       font-style: italic;
       color: #fff;
   }
-  & .pricing-testimonial p.t-pos a {
+  .pricing-testimonial p.t-pos a {
       color: #fff;
   }
-  & .pricing-testimonial img {
+  .pricing-testimonial img {
       margin: 2rem auto 1rem;
       width: 60px;
       border-radius: 100px;
@@ -321,27 +332,27 @@ header {
 /* Get started */
 .get-started {
   padding: 4rem 0 3rem;
-  & h2 {
+  h2 {
     color: #16b3dc;
     font-size: 28px;
     font-weight: 400;
   }
-  & h3 {
+  h3 {
     margin-bottom: 3rem;
     font-size: 18px;
     font-weight: 300;
   }
-  & .row i.fa-external-link {
+  .row i.fa-external-link {
     font-size: 10px;
   }
-  & .row.step {
+  .row.step {
     margin: 0;
     padding: 0;
   }
-  & .row.step-1 {
+  .row.step-1 {
     margin-top: 2rem;
   }
-  & .step .small-2 {
+  .step .small-2 {
     color: #d0d0d0;
     font-size: 77px;
     font-weight: 300;
@@ -349,36 +360,36 @@ header {
     -webkit-transition: color 0.1s linear;
     transition: color 0.1s linear;
   }
-  & .step h4 {
+  .step h4 {
     margin-top: 30px;
     font-size: 19px;
     font-weight: 300;
     -webkit-transition: color 0.1s linear;
     transition: color 0.1s linear;
   }
-  & .step p {
+  .step p {
     color: #7e7e7e;
     font-size: 13px;
     font-weight: 300;
   }
-  & .step:hover h4 {
+  .step:hover h4 {
     color: #61ba01;
   }
-  & .step:hover .small-2 {
+  .step:hover .small-2 {
     color: #17b4dd;
   }
-  & .text-below {
+  .text-below {
     width: 70%;
     margin-left: 7.5rem;
     font-size: 13px;
   }
-  & .row.browser {
+  .row.browser {
     padding: 0;
     border: 2px solid #eee;
     border-radius: 6px;
     background-color: #fff;
   }
-  & .browser .address-bar {
+  .browser .address-bar {
     padding: 0.85rem 5.5rem;
     color: #cacaca;
     font-size: 13px;
@@ -386,42 +397,42 @@ header {
     border-bottom: 2px solid #eee;
     background: transparent url(../images/editor-dots.png) no-repeat 1rem 50%;
   }
-  & .browser .row.viewport {
+  .browser .row.viewport {
     margin: 0;
   }
-  & .browser .viewport ol {
+  .browser .viewport ol {
     margin: 0;
     padding: 1rem 0;
     counter-reset: item;
     list-style-type: none;
     font-size: 13px;
   }
-  & .browser .viewport ol li {
+  .browser .viewport ol li {
     padding-left: 20px;
     color: #393939;
     display: block;
     line-height: 1.8;
   }
-  & .browser .viewport ol li:before {
+  .browser .viewport ol li:before {
     content: counter(item) "  ";
     counter-increment: item;
     color: #cacaca;
     font-weight: 300;
     margin: 0 18px 0 4px;
   }
-  & .browser .viewport li.indent-2:before {
+  .browser .viewport li.indent-2:before {
     margin-right: 60px;
   }
-  & .browser .viewport li.indent-3:before {
+  .browser .viewport li.indent-3:before {
     margin-right: 100px;
   }
-  & .browser .viewport li.indent-4:before {
+  .browser .viewport li.indent-4:before {
     margin-right: 140px;
   }
-  & .browser .viewport li.indent-5:before {
+  .browser .viewport li.indent-5:before {
     margin-right: 180px;
   }
-  & .browser .viewport li.active, & .browser .viewport li.active:before, & .browser .viewport ol li:hover {
+  .browser .viewport li.active, .browser .viewport li.active:before {
     color: #fff;
     background-color: #0b79ff;
     -webkit-transition: color 0.1s linear, background-color 0.1s linear;
@@ -432,21 +443,21 @@ header {
 /* Clients */
 .clients {
   padding: 4rem 0 3.5rem;
-  & h2 {
+  h2 {
     margin-bottom: 3rem;
     color: #393939;
     font-size: 22px;
     font-weight: 400;
   }
-  & li {
+  li {
     height: 140px;
     position: relative;
   }
-  & li a {
+  li a {
     height: inherit;
     display: inline-block;
   }
-  & img {
+  img {
     margin: auto;
     padding: 2rem;
     position: absolute;
@@ -457,18 +468,18 @@ header {
 /* Try Handsontable */
 .try {
   padding: 1.5rem 0 1.2rem;
-  & h2 {
+  h2 {
     color: #fff;
     font-size: 34px;
     font-weight: 400;
   }
-  & .button {
+  .button {
     margin-top: 14px;
     font-size: 18px;
     border: 1px solid #FF3D00;
     background-color: #FF3D00;
   }
-  & .button:hover {
+  .button:hover {
     background-color: #FF5722;
     border-color: #FF5722;
   }
@@ -476,23 +487,23 @@ header {
 
 /* Subpages */
 .subpage {
-  & .footer .footer-menu {
+  .footer .footer-menu {
     padding: 2rem 0 1rem;
     border-top: 1px solid #efefef;
   }
-  & h2.mhead {
+  h2.mhead {
     font-size: 30px;
     color: #393939;
     letter-spacing: -0.4px;
     font-weight: 300;
   }
-  & h3.shead {
+  h3.shead {
     margin-top: 0.6rem;
     font-size: 1rem;
     font-weight: 300;
     color: #a5a5a5;
   }
-  & p.pgraph {
+  p.pgraph {
     font-size: 15px;
     font-weight: 300;
   }
@@ -501,38 +512,38 @@ header {
 /* About */
 .about-details {
   margin: 3rem 0;
-  & p {
+  p {
     font-size: 15px;
     font-weight: 300;
   }
-  & h2 {
+  h2 {
     font-size: 30px;
     font-weight: 300;
   }
-  & hr {
+  hr {
     width: 13%;
   }
-  & p.about-team {
+  p.about-team {
     width: 90%;
     text-align: justify;
   }
-  & p.about-team span {
+  p.about-team span {
     margin: 1rem 0 0;
     display: block;
   }
-  & .team {
+  .team {
     margin-top: 5rem;
   }
-  & .team img {
+  .team img {
     width: 120px;
     border-radius: 100px;
   }
-  & .team h4 {
+  .team h4 {
     margin: 1rem 0 0;
     font-size: 0.9rem;
     font-weight: 600;
   }
-  & .team p {
+  .team p {
     font-size: 0.9rem;
   }
 }
@@ -540,23 +551,23 @@ header {
 /* Features */
 .features-details {
   margin: 3rem 0;
-  & h4 {
+  h4 {
     margin: 1rem 0;
     font-size: 1.2rem;
   }
-  & ul {
+  ul {
     margin: 5rem 0 0;
   }
-  & ul li {
+  ul li {
     margin-bottom: 2rem;
   }
-  & ul li p {
+  ul li p {
     margin: 0 auto;
     width: 80%;
     font-size: 15px;
     font-weight: 300;
   }
-  & .fa-3x {
+  .fa-3x {
     color: #8c8c8c;
   }
 }
@@ -564,17 +575,17 @@ header {
 /* Licensing */
 .licensing-details {
   margin: 3rem 0;
-  & h2.mhead {
+  h2.mhead {
     margin: 0;
   }
-  & .pgraph {
+  .pgraph {
     width: 90%;
   }
-  & .pgraph span {
+  .pgraph span {
     margin: 1rem 0 0;
     display: block;
   }
-  & hr {
+  hr {
     width: 13%;
   }
 }
@@ -582,16 +593,25 @@ header {
 /* Examples */
 .examples-details {
   margin: 3rem 0;
-  & .tabs {
+  .tabs {
     margin-top: 3rem;
     padding: 0 5rem;
     display: inline-block;
     border-bottom: 1px solid #dfdfdf;
   }
-  & .tabs dd {
+
+  .tabs-content {
+    margin: 2rem auto 0;
+
+    .handsontable {
+      margin: auto;
+    }
+  }
+
+  .tabs dd {
     top: 1px;
   }
-  & .tabs dd > a {
+  .tabs dd > a {
     padding: 0.7rem 2rem;
     color: #5f5f5f;
     font-size: 0.9rem;
@@ -600,23 +620,23 @@ header {
     border-top: 1px solid #dfdfdf;
     border-right: 1px solid #dfdfdf;
   }
-  & .tabs dd.active > a {
+  .tabs dd.active > a {
     color: #07a6d1;
     box-shadow: inset 0px -1px 0px #fff;
   }
-  & .tabs dd:first-child > a {
+  .tabs dd:first-child > a {
     border-left: 1px solid #dfdfdf;
   }
-  & .tabs dd:not(.active) > a{
+  .tabs dd:not(.active) > a{
     background-color: #fafafa;
   }
-  & .tabs dd:not(.active) > a:hover {
+  .tabs dd:not(.active) > a:hover {
     background-color: #f5f5f5;
   }
-  & .content {
+  .content {
     padding: 0;
   }
-  & .content p {
+  .content p {
     margin-top: 2rem;
     font-size: 12px;
   }
@@ -625,17 +645,17 @@ header {
 /* Pricing */
 .pricing-details {
   margin: 3rem 0;
-  & h3.shead {
+  h3.shead {
     margin-bottom: 6rem;
   }
-  & hr {
+  hr {
     width: 13%;
   }
-  & .pgraph {
+  .pgraph {
     width: 90%;
     text-align: justify;
   }
-  & .pricing-rate span {
+  .pricing-rate span {
     margin-right: 1rem;
     padding: 0.2rem 0.6rem;
     font-size: 15px;
@@ -643,20 +663,20 @@ header {
     color: #fff;
     background: #8BC34A;
   }
-  & #pricing-plans {
+  #pricing-plans {
     margin: 1rem 0 2rem;
   }
-  & .tabs {
+  .tabs {
     width: 100%;
     padding: 0;
     display: inline-block;
     border-bottom: 1px solid #dfdfdf;
   }
-  & .tabs dd {
+  .tabs dd {
     width: 12.53%;
     top: 1px;
   }
-  & .tabs dd > a {
+  .tabs dd > a {
     padding: 0.7rem 0;
     color: #5f5f5f;
     font-size: 0.9rem;
@@ -665,92 +685,92 @@ header {
     border-top: 1px solid #dfdfdf;
     border-right: 1px solid #dfdfdf;
   }
-  & .tabs dd.active > a {
+  .tabs dd.active > a {
     color: #07a6d1;
     box-shadow: inset 0px -1px 0px #fff;
   }
-  & .tabs dd:first-child > a {
+  .tabs dd:first-child > a {
     border-left: 1px solid #dfdfdf;
   }
-  & .tabs dd:not(.active) > a{
+  .tabs dd:not(.active) > a{
     background-color: #fafafa;
   }
-  & .tabs dd:not(.active) > a:hover {
+  .tabs dd:not(.active) > a:hover {
     background-color: #f5f5f5;
   }
-  & .tabs-content {
+  .tabs-content {
     padding: 1.4rem 0 0;
     text-align: center;
     margin-bottom: 0;
   }
-  & .tabs-content .content {
+  .tabs-content .content {
     padding-top: 0;
   }
-  & .tabs-content li {
+  .tabs-content li {
     height: 6rem;
     border: 1px solid #dfdfdf;
     border-right: none;
     border-top: none;
   }
-  & .tabs-content li p {
+  .tabs-content li p {
     margin: 0;
     line-height: 1;
     font-size: 14px;
   }
-  & .tabs-content li p:first-child {
+  .tabs-content li p:first-child {
     margin: 1.7rem 0 0.5rem;
     font-size: 18px;
     font-weight: 800;
   }
-  & .tabs-content li p:last-child {
+  .tabs-content li p:last-child {
     color: #797979;
   }
-  & .tabs-content li:nth-child(4),
-  & .tabs-content li:nth-child(8) {
+  .tabs-content li:nth-child(4),
+  .tabs-content li:nth-child(8) {
     border-right: 1px solid #dfdfdf;
   }
-  & .tabs-content .content ul {
+  .tabs-content .content ul {
     margin: 0 auto;
   }
-  & .tabs-content label {
+  .tabs-content label {
     margin-right: 0;
     font-size: 0.8rem;
     position: relative;
     top: -2px;
   }
-  & .tabs-content img.paypal-badge {
+  .tabs-content img.paypal-badge {
     float: right;
   }
-  & .tabs-content .button {
+  .tabs-content .button {
     padding: 0.8rem 2rem;
     color: #fff;
     font-weight: 400;
     border-radius: 0;
     background: #607D8B;
   }
-  & .tabs-content .button:hover {
+  .tabs-content .button:hover {
     background: #7597A8;
   }
-  & .tabs-content .button i {
+  .tabs-content .button i {
     margin-left: 10px;
   }
-  & .price-faq h2 {
+  .price-faq h2 {
     margin: 1rem 0 4rem;
   }
-  & .price-faq h3 {
+  .price-faq h3 {
     font-size: 1.2rem;
   }
-  & .price-faq p {
+  .price-faq p {
     font-size: 15px;
     font-weight: 300;
   }
-  & .price-contact {
+  .price-contact {
     margin: 3rem auto 4rem;
     padding: 2rem 0;
     font-size: 30px;
     font-weight: 400;
   }
-  & .price-contact h2 {
+  .price-contact h2 {
     margin-bottom: 1rem;
     font-size: 34px;
     color: #393939;
@@ -760,23 +780,23 @@ header {
 /* Features */
 .support-details {
   margin: 3rem 0;
-  & h4 {
+  h4 {
     margin: 1rem 0;
     font-size: 1.2rem;
   }
-  & ul {
+  ul {
     margin: 5rem 0 0;
   }
-  & ul li {
+  ul li {
     margin-bottom: 2rem;
   }
-  & ul li p {
+  ul li p {
     margin: 0 auto;
     width: 80%;
     font-size: 15px;
     font-weight: 300;
   }
-  & .fa-4x {
+  .fa-4x {
     color: #8c8c8c;
   }
 }
@@ -784,23 +804,23 @@ header {
 /* Terms of use, Credits, Privacy policy, Cookie statement */
 .plain-details {
   margin: 3rem 0;
-  & hr {
+  hr {
     width: 13%;
   }
-  & i.fa-heart {
+  i.fa-heart {
     margin-left: 0.5rem;
     color: #e4e4e4;
     font-size: 26px;
   }
-  & dl dt {
+  dl dt {
     font-weight: 400;
   }
-  & dd ul {
+  dd ul {
     margin-left: 2rem;
     font-size: 15px;
     font-weight: 300;
   }
-  & .pgraph p {
+  .pgraph p {
     text-align: justify;
     font-size: 15px;
     font-weight: 300;
@@ -810,13 +830,13 @@ header {
 /* Contact us */
 .contact-details {
   margin: 3rem 0;
-  & .panel {
+  .panel {
     margin: 2rem 0;
     border-style: dashed;
     border-color: #d2d2d2;
     background: #fff;
   }
-  & p.pgraph a {
+  p.pgraph a {
     font-weight: 300;
     font-size: 1.5rem;
   }
@@ -825,28 +845,28 @@ header {
 /* Footer */
 .footer {
   padding-bottom: 1rem;
-  & .footer-menu {
+  .footer-menu {
     padding: 3rem 0 1rem;
   }
-  & .footer-menu .columns {
+  .footer-menu .columns {
     margin: 1rem auto 3rem;
   }
-  & ul li p {
+  ul li p {
     margin-bottom: 0;
     font-weight: 300;
     font-size: 13px;
   }
-  & ul li.heading p {
+  ul li.heading p {
     margin-bottom: 0.875rem;
     font-weight: 400;
     font-size: 13px;
   }
-  & ul li > a {
+  ul li > a {
     margin-bottom: 14px;
     font-weight: 300;
     font-size: 13px;
   }
-  & .copyright span {
+  .copyright span {
     color: #a5a5a5;
     font-size: 12px;
     font-weight: 300;

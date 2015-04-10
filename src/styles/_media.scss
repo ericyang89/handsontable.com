@@ -4,10 +4,10 @@ header {
     .name img {
       margin: 0 1rem;
     }
-    & .top-bar-section ul > li:hover a {
+    .top-bar-section ul > li:hover a {
       box-shadow: none;
     }
-    & .top-bar-section .right li .dropdown {
+    .top-bar-section .right li .dropdown {
       left: 104%;
     }
   }
@@ -15,13 +15,13 @@ header {
     .name img {
       max-width: 147px;
     }
-    & .top-bar-section ul li {
+    .top-bar-section ul li {
       margin: 0 0.3rem;
     }
-    & .top-bar-section ul li a {
+    .top-bar-section ul li a {
       font-size: 13px!important;
     }
-  & .top-bar-section li:not(.has-form) a:not(.button) {
+    .top-bar-section li:not(.has-form) a:not(.button) {
       padding: 0 0.5rem;
     }
   }
@@ -50,16 +50,16 @@ header {
 .main .banner {
   @media #{$small-only} {
     padding: 1rem 0 3rem;
-    & h1 {
+    h1 {
       font-size: 36px;
     }
-    & h2 {
+    h2 {
       margin: 1rem 0 2rem;
     }
-    & .download {
+    .download {
       margin-top: 1rem;
     }
-    & .banner-buttons .button {
+    .banner-buttons .button {
       width: 100%;
       border-color: #fff;
     }
@@ -69,7 +69,7 @@ header {
   }
 }
 .what-is {
-  & .col-left {
+  .col-left {
     @media #{$small-only} {
       padding: 3rem 0 3rem 0.9375rem;
     }
@@ -81,7 +81,7 @@ header {
 .flavors {
   @media #{$small-only} {
     padding: 3rem 0 2rem;
-    & li {
+    li {
       margin: 1rem 0;
     }
   }
@@ -89,7 +89,7 @@ header {
 .testimonials {
   @media #{$small-only} {
     padding-bottom: 0.5rem;
-    & .pricing-testimonial p.t-txt {
+    .pricing-testimonial p.t-txt {
       font-size: 29px;
     }
   }
@@ -97,13 +97,13 @@ header {
 .clients {
   @media #{$small-only} {
     padding: 3rem 0 1rem;
-    & h2 {
+    h2 {
       margin-bottom: 1rem;
     }
   }
 }
 .try{
-  & h2 {
+  h2 {
     @media #{$small-only} {
       font-size: 28px;
     }
@@ -112,7 +112,7 @@ header {
 .about-details {
   @media #{$small-only} {
     margin: 2rem 0 0;
-    & p.about-team {
+    p.about-team {
       width: 100%;
     }
     .team {
@@ -124,14 +124,14 @@ header {
   @media #{$small-only} {
     margin: 2rem 0 0;
   }
-  & ul {
+  ul {
     margin-top: 4rem;
   }
 }
 .licensing-details {
   @media #{$small-only} {
     margin: 2rem 0 0;
-    & .pgraph {
+    .pgraph {
       width: 100%;
     }
   }
@@ -139,26 +139,26 @@ header {
 .examples-details {
   @media #{$small-only} {
     margin: 2rem 0 0;
-    & .tabs {
+    .tabs {
       padding: 0;
       display: block;
     }
-    & .tabs dd {
+    .tabs dd {
       width: 50%;
       top: 0!important;
     }
-    & .tabs dd > a {
+    .tabs dd > a {
       padding: 1.2rem 0;
       box-shadow: none;
       border-width: 1px 1px 0 1px;
       border-color: #dfdfdf;
     }
-    & .tabs dd:nth-child(3) > a, & .tabs dd:nth-child(5) > a {
+    .tabs dd:nth-child(3) > a, .tabs dd:nth-child(5) > a {
       border-left: 1px solid #dfdfdf;
     }
   }
   @media #{$medium-only} {
-    & .tabs {
+    .tabs {
       padding: 0 1rem;
     }
   }
@@ -166,43 +166,43 @@ header {
 .pricing-details {
   @media #{$small-only} {
     margin: 2rem 0 0;
-    & h3.shead {
+    h3.shead {
       margin-bottom: 3rem;
     }
-    & .pgraph {
+    .pgraph {
       width: 100%;
     }
-    & .tabs dd {
+    .tabs dd {
       width: 50%;
       top: 0!important;
     }
-    & .tabs dd > a {
+    .tabs dd > a {
       padding: 1.2rem 0;
       box-shadow: none;
       border-width: 1px 1px 0 1px;
       border-color: #dfdfdf;
     }
-    & .tabs dd:nth-child(1) > a, & .tabs dd:nth-child(3) > a {
+    .tabs dd:nth-child(1) > a, .tabs dd:nth-child(3) > a {
       border-left: 1px solid #dfdfdf;
     }
-    & .tabs-content img.paypal-badge {
+    .tabs-content img.paypal-badge {
       float: none;
     }
-    & .tabs-content li {
+    .tabs-content li {
       border-right: 1px solid #dfdfdf;
     }
-    & .tabs-content .button {
+    .tabs-content .button {
       width: 100%;
     }
-    & #pricing-plans {
+    #pricing-plans {
       margin-top: 0;
     }
-    & .price-faq h2 {
+    .price-faq h2 {
       margin: 1rem 0 2rem;
     }
   }
   @media #{$medium-only} {
-    & .tabs dd {
+    .tabs dd {
       width: 18%;
     }
   }
@@ -212,7 +212,7 @@ header {
   @media #{small-only} {
     margin: 2rem 0 0;
   }
-  & ul {
+  ul {
     margin-top: 4rem;
   }
 }
@@ -224,10 +224,10 @@ header {
 .contact-details {
   @media #{$small-only} {
     margin: 2rem 0;
-    & .panel {
+    .panel {
       margin: 2rem 0 0;
     }
-    & p.pgraph a {
+    p.pgraph a {
       font-weight: 300;
       font-size: 1rem;
     }
@@ -236,7 +236,7 @@ header {
 .footer {
   @media #{$small-only} {
     padding: 2rem 0 1rem;
-    & i.fa {
+    i.fa {
       display: none;
     }
   }
