@@ -12,10 +12,10 @@ block banner
         .large-12.columns
             ul.large-block-grid-2.medium-block-grid-1.small-block-grid-1
                 li
-                    h1 Excel-like data grid for apps
+                    h1 Excel-like spreadsheet for apps
                     h2 JavaScript component with blazing fast engine
                     .banner-buttons
-                        a.button.radius.get-started(href="http://developer.handsontable.com/get-started") Get started
+                        a.button.radius.get-started(href="http://developer.handsontable.com/get-started") Getting started
                         a.button.radius.download(href="https://github.com/handsontable/handsontable/releases/latest", target="_blank") Download v. 0.13.1
                 li.text-center.show-for-large-up.handsontable-holder
                     div#intro
@@ -47,8 +47,8 @@ block content
                         p
                             | Handsontable handles large
                             br
-                            | amounts of data with ease
-                        a.button#load-data(href="#") Load now 70 000 cells
+                            | amounts of data
+                        a.button#load-data(href="#") Load 70 000 cells
 
     .circles.row-grey.text-center
         .row
@@ -63,7 +63,7 @@ block content
                             | one million rows or columns
                     li
                         i.fa.fa-code.fa-4x.c-bluegrey
-                        h3 OPEN SOURCE
+                        h3 FREE AND OPEN
                         p
                             | Free for either private
                             br
@@ -169,7 +169,7 @@ block content
                                 h4 Include Handsontable CSS and JavaScript files
                                 p
                                     | Make sure you're adding them properly. #{''}
-                                    a(href="https://github.com/handsontable/handsontable/releases/latest", target="_blank") Get the latest release #{""}
+                                    a(href="https://github.com/handsontable/handsontable/releases/latest", target="_blank") Download the latest release #{""}
                                         i.fa.fa-external-link
                         .row.step-2.step(rel="line-2")
                             .small-2.columns 2
@@ -180,10 +180,8 @@ block content
                                     | how to build an app on top of your data
                         .row
                             p.text-below
-                                | If you want to know more about Handsontable, don&#8217;t hesitate to #{''}
-                                br
-                                a(href="https://groups.google.com/forum/#!forum/handsontable", target="_blank") ask on our Google Group #{""}
-                                    i.fa.fa-external-link
+                                | You can also download a package using Bower. Note that Bower requires Node, npm and Git.
+                                span.highlight-box bower install handsontable
                     li
                         .row.browser
                             .address-bar view-source:your-project.com
@@ -252,4 +250,4 @@ block content
         .row
             .large-12.columns
                 h2 Ready to try Handsontable?
-                a.button(href="http://developer.handsontable.com/get-started") Get started
+                a.button(href="http://docs.handsontable.com") Get started

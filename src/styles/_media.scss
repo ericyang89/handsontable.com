@@ -4,6 +4,11 @@ header {
     .name img {
       margin: 0 1rem;
     }
+    .top-bar .toggle-topbar.menu-icon {
+      margin-top: 0;
+      top: 10%;
+      right: 14px;
+    }
     & .top-bar-section ul > li:hover a {
       box-shadow: none;
     }
@@ -51,16 +56,21 @@ header {
   @media #{$small-only} {
     padding: 1rem 0 3rem;
     & h1 {
-      font-size: 36px;
+      font-size: 40px;
+      line-height: 1.3;
     }
     & h2 {
+      font-size: 25px;
       margin: 1rem 0 2rem;
     }
-    & .download {
+    & .banner-buttons .button.download {
       margin-top: 1rem;
+      padding: 0.8rem 2rem 0.875rem 2rem;
+      background: none;
     }
     & .banner-buttons .button {
       width: 100%;
+      font-size: 20px;
       border-color: #fff;
     }
   }

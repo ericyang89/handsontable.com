@@ -6,7 +6,7 @@ html
             - var page_class = page_class || "undefined"
             - var page_subclass = page_subclass || " "
             - var title = title || "undefined"
-            - var description = description || "undefined"
+            - var description = description || "undfined"
 
         title #{title} #{""}
             | | Handsontable - JavaScript data grid editor. Excel-like grid editing with HTML & JavaScript
@@ -20,6 +20,7 @@ html
         link(href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700);", rel="stylesheet")
 
     body(class="#{page_class} #{page_subclass}")
+        include ../pages/tag_manager.jade
         header
             block navigation
                 include ../pages/_menu.jade
