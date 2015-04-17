@@ -127,6 +127,9 @@ header {
   & .top-bar-section li.has-dropdown:hover > a {
     box-shadow: 0 1px 0 #4B96E0 inset, -1px 0 0 #4B96E0 inset, 1px 0 0 #4B96E0 inset;
   }
+  & .top-bar-section ul .dropdown li a:hover {
+    background-color: #0760BA!important;
+  }
   & .top-bar-section ul .dropdown li a:last-child {
     box-shadow: 0 1px 0 #4B96E0 inset, -1px 0 0 #4B96E0 inset, 1px 0 0 #4B96E0 inset, 0 -1px 0 #4B96E0 inset;
   }
@@ -251,6 +254,9 @@ header {
   }
   & .col-right a:hover {
     background: #83C74D;
+  }
+  & .disabled, & .disabled:hover {
+      background: #83C74D!important;
   }
 }
 
@@ -643,17 +649,25 @@ header {
   & .tabs dd:not(.active) > a:hover {
     background-color: #f5f5f5;
   }
-  & .content {
+  & .tabs-content {
+    margin: 2rem 0 auto;
     padding: 0;
   }
-  & .content p {
-    margin-top: 2rem;
+  & .tabs-content h4 {
+    font-size: 16px;
+    font-weight: 300;
+    margin-top: 1rem;
+  }
+  & .tabs-content p {
     font-size: 12px;
+  }
+  & .handsontable {
+    margin: auto;
   }
 }
 
-/* Pricing */
-.pricing-details {
+/* Support services */
+.services-details {
   margin: 3rem 0;
   & h3.shead {
     margin-bottom: 6rem;
@@ -788,7 +802,7 @@ header {
 }
 
 /* Community */
-.support-details {
+.community-details {
   margin: 3rem 0;
   & h4 {
     margin: 1rem 0;

@@ -26,29 +26,57 @@
     animation-delay: 0.5s;
 }
 
-/* All examples */
-#intro.handsontable, #examples.handsontable, #advanced.handsontable,
-#personal.handsontable, #finance.handsontable, #science.handsontable,
-#sport.handsontable {
-  overflow: hidden;
-  margin: 2rem auto 0;
-  &:not(.ht_master) table {
-    box-shadow: 0px 1px 0 #ccc;
-    -webkit-box-shadow: 0px 1px 0 #ccc;
+.handsontable {
+   &.overflowHidden {
+     overflow: hidden !important;
+   }
+   &.overflowScroll {
+//     overflow-y: scroll;
+//     overflow: hidden;
+   }
+
+  .currentRow {
+    background-color: #E7E8EF;
   }
-  & td, & th {
+
+  .currentCol {
+    background-color: #F9F9FB;
+  }
+}
+
+.intro-container {
+  position: relative;
+  top: 31px;
+}
+#intro.handsontable {
+  margin: 0 auto;
+  background: transparent !important;
+}
+
+/* All examples */
+#intro.handsontable,
+#examples.handsontable,
+#basic.handsontable,
+#advanced.handsontable,
+#personal.handsontable,
+#finance.handsontable,
+#science.handsontable,
+#sport.handsontable {
+  background: white;
+  &:not(.ht_master) table {
+    box-shadow: 0 1px 0 #ccc;
+  }
+
+  td, th {
     font-size: 13px;
     line-height: 22px;
   }
-  & input, & textarea {
-    line-height: 18px;
-    padding-left: 3px;
-    box-shadow: 0px 1px 0 #ccc;
-    -webkit-box-shadow: 0px 1px 0 #ccc;
+  textarea {
+    transition: none;
   }
 }
 .examples .handsontable {
-  & .wtHolder {
+  .wtHolder {
     padding-bottom: 1px;
   }
   &.htContextMenu table tbody tr td div {
@@ -63,11 +91,10 @@
 
 /* Advanced */
 #advanced {
-  & .htCore > tbody > tr:nth-child(odd) > td {
+  .htCore > tbody > tr:nth-child(odd) > td {
      background-color: #f9f9f9;
   }
 }
-
 
 
 

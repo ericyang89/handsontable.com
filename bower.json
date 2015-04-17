@@ -2,13 +2,15 @@
   "name": "Handsontable.com",
   "version": "0.0.1",
   "dependencies": {
-    "fastclick": "*",
-    "foundation": "*",
-    "jquery": "*",
-    "jquery.cookie": "*",
-    "jquery-placeholder": "*",
-    "modernizr": "*",
-    "font-awesome": "*",
-    "handsontable": "*"
+    "fastclick": "~1.0.6",
+    "foundation": "~5.5.1",
+    "jquery": "~2.1.3",
+    "jquery.cookie": "~1.4.1",
+    "jquery-placeholder": "~2.0.7",
+    "modernizr": "~2.8.3",
+    "font-awesome": "~4.3.0",
+    "chroma-js": "~0.5.6",
+    "handsontable": "0.14.1",
+    "handsontable-ruleJS": "https://github.com/handsontable/handsontable-ruleJS/archive/0.0.1.zip"
   }
 }

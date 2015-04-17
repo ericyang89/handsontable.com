@@ -9,11 +9,16 @@ header {
       top: 10%;
       right: 14px;
     }
-    & .top-bar-section ul > li:hover a {
-      box-shadow: none;
+    & .top-bar-section ul li a {
+      padding: .36rem 0.875rem!important;
+      font-size: 15px;
+      box-shadow: none!important;
     }
     & .top-bar-section .right li .dropdown {
       left: 104%;
+    }
+    & .top-bar-section li .dropdown li a:hover {
+      background: none!important;
     }
   }
   @media #{$medium-only} {
@@ -76,6 +81,19 @@ header {
   }
   @media #{$medium-only} {
     padding: 4rem 0 7rem;
+  }
+}
+.circles {
+  @media #{$small-only} {
+    & i {
+      width: 10rem;
+      height: 10rem;
+      font-size: 5rem;
+      line-height: 10rem;
+    }
+    & p {
+      margin-bottom: 2rem;
+    }
   }
 }
 .what-is {
@@ -173,7 +191,7 @@ header {
     }
   }
 }
-.pricing-details {
+.services-details {
   @media #{$small-only} {
     margin: 2rem 0 0;
     & h3.shead {
@@ -218,7 +236,7 @@ header {
   }
 }
 
-.support-details {
+.community-details {
   @media #{small-only} {
     margin: 2rem 0 0;
   }

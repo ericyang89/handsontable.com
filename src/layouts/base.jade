@@ -17,7 +17,12 @@ html
         script(src="#{data.baseUrl}bower_components/foundation/js/vendor/modernizr.js")
         link(href="#{data.baseUrl}styles/main.css", rel="stylesheet")
         link(href="#{data.baseUrl}bower_components/handsontable/dist/handsontable.full.min.css", rel="stylesheet")
+        link(href="#{data.baseUrl}bower_components/pikaday/css/pikaday.css", rel="stylesheet")
         link(href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700);", rel="stylesheet")
+
+        script
+          var hotVersion = "#{data.hotVersion}"
+          var baseUrl = "#{data.baseUrl}"
 
     body(class="#{page_class} #{page_subclass}")
         include ../pages/tag_manager.jade
@@ -39,8 +44,14 @@ html
         block scripts
             script(src="#{data.baseUrl}bower_components/jquery/jquery.min.js")
             script(src="#{data.baseUrl}bower_components/foundation/js/vendor/fastclick.js")
-            script(src="#{data.baseUrl}bower_components/foundation/js/foundation.min.js")
+            script(src="#{data.baseUrl}bower_components/foundation/js/foundation.js")
+            script(src="#{data.baseUrl}bower_components/moment/moment.js")
+            script(src="#{data.baseUrl}bower_components/pikaday/pikaday.js")
+            script(src="#{data.baseUrl}bower_components/chroma-js/chroma.min.js")
             script(src="#{data.baseUrl}bower_components/handsontable/dist/handsontable.full.min.js")
+            script(src="#{data.baseUrl}bower_components/ruleJS/dist/full/ruleJS.all.full.js")
+            script(src="#{data.baseUrl}bower_components/handsontable-ruleJS/src/handsontable.formula.js")
+
             script(src="#{data.baseUrl}scripts/main.js")
             script#github-bjs(async="", defer="", src="https://buttons.github.io/buttons.js")
             script

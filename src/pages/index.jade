@@ -15,9 +15,10 @@ block banner
                     h1 Excel-like spreadsheet for apps
                     h2 JavaScript component with blazing fast engine
                     .banner-buttons
-                        a.button.radius.get-started(href="http://developer.handsontable.com/get-started") Getting started
+                        a.button.radius.get-started(href="http://docs.handsontable.com") Getting started
                         a.button.radius.download(href="https://github.com/handsontable/handsontable/releases/latest", target="_blank") Download v. 0.13.1
                 li.text-center.show-for-large-up.handsontable-holder
+                  div.intro-container
                     div#intro
 
 block content
@@ -48,7 +49,7 @@ block content
                             | Handsontable handles large
                             br
                             | amounts of data
-                        a.button#load-data(href="#") Load 70 000 cells
+                        a.button#load-data(href="#") Load now 100 000 cells
 
     .circles.row-grey.text-center
         .row
@@ -176,7 +177,7 @@ block content
                             .small-10.columns
                                 h4 Call the Handsontable code
                                 p
-                                    a(href="http://developer.handsontable.com/get-started") Learn more #{''}
+                                    a(href="http://developer.handsontable.com/") Learn more #{''}
                                     | how to build an app on top of your data
                         .row
                             p.text-below
@@ -192,16 +193,17 @@ block content
                                     li.indent-2 &#60;head&#62;
                                     li.indent-3 &#60;title&#62;Handsontable&#60;/title&#62;
                                     li.indent-3.line-1 &#60;script src="dist/handsontable.full.js"&#62;&#60;/script&#62;
-                                    li.indent-3.line-1 &#60;link rel="stylesheet" href="dist/jquery.handsontable.full.css" /&#62;
+                                    li.indent-3.line-1 &#60;link rel="stylesheet" href="dist/handsontable.full.css" /&#62;
                                     li.indent-2 &#60;/head&#62;
                                     li.indent-2 &#60;body&#62;
                                     li.indent-3.line-2 &#60;script&#62;
                                     li.indent-4.line-2 var data = ["1", "2", "3"];
-                                    li.indent-4.line-2 var $container = $("#example1");
-                                    li.indent-4.line-2 $container.handsontable ({
+                                    li.indent-4.line-2 var container = document.getElementById("example");
+                                    li.indent-4.line-2 var hot = new Handsontable ({
                                     li.indent-5.line-2 data: data
                                     li.indent-4.line-2 });
                                     li.indent-3.line-2 &#60;/script&#62;
+                                    li.indent-3.line-2 &#60;div id="example"&#62; &#60;/div&#62;
                                     li.indent-2 &#60;/body&#62;
                                     li.indent-1 &#60;/html&#62;
     .clients.text-center

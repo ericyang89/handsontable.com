@@ -9,7 +9,7 @@ block variables
     description = "Handsontable - JavaScript data grid editor. Excel-like grid editing with HTML & JavaScript"
 
 block content
-    .pricing-details
+    .services-details
         .row
             .large-12.columns.text-center
                 ul.large-block-grid-2.medium-block-grid-2.small-block-grid-1
@@ -22,9 +22,10 @@ block content
                                 a(href="/about-us.html") Handsoncode #{""}
                                 | we do understand the importance of your data.
                                 | That's why we are always ready to go the extra mile to get your app done.
-                                | You get a proactive guidance from an assigned assistant along with priority support.
-                                | Since we expertize in data grids and visualization software we can teach your team
-                                | how to deliver great results faster.
+                                | You get a proactive guidance from an assigned engineer along with priority support.
+                                | We can adapt or modify Handsontable however you like, but we're also opened for
+                                | new business oportunities not connected with our open source products.
+                                | In any case, we'd love to hear from you.
                         p.pricing-rate
                             span Hourly rate: $#{hourly_rate}
                             span Daily rate: $#{hourly_rate*8}
@@ -34,26 +35,26 @@ block content
                         p.pgraph
                             span
                                 | Handsontable is free and always will be. However, if you need a license other than MIT to
-                                | reserve more rights to your copy of the software we can offer you a custom license tailored individually.
-                                | The commercial license comes without a support but allows
-                                | you to incorporate Handsontable into your software without reffering to us in the license.
-                                | If you need more details, just #{""}
-                                a(href="contact-us.html") contact us.
+                                | reserve more rights to what you build upon it, we can offer you a custom license tailored individually.
+                                | The commercial license comes with or without a support and allows
+                                | you to incorporate Handsontable into your software without reffering to us in the license. #{""}
+                                a(href="contact-us.html") Contact us for more details.
+
                 #pricing-plans.text-center.clearfix
                     .show-for-small-only.text-left
                         h2.mhead Our plans
                         hr
                     dl.tabs.left(data-tab="")
-                        dd.active(name="Indie")
+                        dd(name="Indie")
                             a(href="#panel-1") Indie
                         dd(name="Small")
                             a(href="#panel-2") Small
-                        dd(name="Medium")
+                        dd.active(name="Medium")
                             a(href="#panel-3") Medium
                         dd(name="Enterprise")
                             a(href="#panel-4") Enterprise
                     .tabs-content
-                        #panel-1.content.active(aria-hidden="false")
+                        #panel-1.content
                             ul.large-block-grid-4.medium-block-grid-4.small-block-grid-1
                                 li
                                     p 3
@@ -105,7 +106,7 @@ block content
                                 li
                                     p Yes
                                     p Kick-off meeting
-                        #panel-3.content
+                        #panel-3.content.active
                             ul.large-block-grid-4.medium-block-grid-4.small-block-grid-1
                                 li
                                     p 40
