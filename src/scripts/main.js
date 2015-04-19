@@ -688,7 +688,7 @@ var HT = (function () {
     },
     index: function () {
       var container = document.getElementById('intro');
-
+      var loadDataButton = document.querySelector('#load-data');
       if (!container) {
         return;
       }
@@ -707,7 +707,7 @@ var HT = (function () {
         }
       });
 
-      Handsontable.Dom.addEvent(document.querySelector('#load-data'), 'click', function () {
+      Handsontable.Dom.addEvent(loadDataButton, 'click', function () {
         if (Handsontable.Dom.hasClass(this, 'disabled')) {
           return;
         }
@@ -732,6 +732,7 @@ var HT = (function () {
             afterLoadData: function () {
               setTimeout(function () {
                 hotInstances['index'].selectCell(9999, 0);
+                loadDataButton.innerHTML = "100 000 rows loaded";
               }, 250)
             }
           });

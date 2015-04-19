@@ -42,11 +42,15 @@
   .currentCol {
     background-color: #F9F9FB;
   }
+
+  .handsontableInput {
+    line-height: 22px;
+  }
 }
 
 .intro-container {
   position: relative;
-  top: 31px;
+  top: 32px;
 }
 #intro.handsontable {
   margin: 0 auto;
@@ -63,8 +67,10 @@
 #science.handsontable,
 #sport.handsontable {
   background: white;
+
   &:not(.ht_master) table {
-    box-shadow: 0 1px 0 #ccc;
+//    box-shadow: 0 1px 0 #ccc;
+    box-shadow: none;
   }
 
   td, th {
