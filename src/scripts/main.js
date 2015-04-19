@@ -662,8 +662,8 @@ var HT = (function () {
           manualRowResize: true,
           columnSorting: true,
           contextMenu: true,
-          currentRowClassName: 'currentRow',
-          currentColClassName: 'currentCol',
+          //currentRowClassName: 'currentRow',
+          //currentColClassName: 'currentCol',
           autoWrapRow: true,
           columns: [
             {data: 0, type: 'numeric'},
