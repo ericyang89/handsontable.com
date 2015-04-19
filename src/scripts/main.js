@@ -640,7 +640,6 @@ var HT = (function () {
               {data: 2, type: 'numeric', format: '0[.]000000000000000', renderer: heatmapRenderer},
               {data: 3, type: 'numeric', format: '0[.]000000000000000'},
               {data: 4, type: 'numeric', format: '0[.]000000000000000', renderer: heatmapRenderer},
-              //{data: 4, renderer: 'html'}
             ],
             afterLoadData: updateHeatmap,
             beforeChangeRender: updateHeatmap,
