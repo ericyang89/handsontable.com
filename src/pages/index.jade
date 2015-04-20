@@ -1,4 +1,5 @@
 extends ../layouts/base
+extends ../layouts/base
 
 block variables
     page_name = "Main page"
@@ -16,7 +17,7 @@ block banner
                     h2 JavaScript component with blazing fast engine
                     .banner-buttons
                         a.button.radius.get-started(href="http://docs.handsontable.com") Getting started
-                        a.button.radius.download(href="https://github.com/handsontable/handsontable/releases/latest", target="_blank") Download v. 0.13.1
+                        a.button.radius.download(href="https://github.com/handsontable/handsontable/releases/latest", target="_blank") Download v. #{data.hotVersion}
                 li.text-center.show-for-large-up.handsontable-holder
                   div.intro-container
                     div#intro
