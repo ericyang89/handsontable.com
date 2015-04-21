@@ -19,6 +19,6 @@ module.exports = function (shipit) {
   shipit.on('published', function() {
     var current = shipit.config.deployTo + '/current';
 
-    shipit.remote('cd ' + current + ' && npm install && bower install --config.interactive=false && grunt build');
+    shipit.remote('cd ' + current + ' && npm install && bower install --config.interactive=false -F && grunt build');
   });
 };
