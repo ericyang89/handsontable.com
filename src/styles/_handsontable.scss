@@ -55,6 +55,11 @@
 #intro.handsontable {
   margin: 0 auto;
   background: transparent !important;
+  &.large-data {
+    .ht_master {
+      background: #ffffff;
+    }
+  }
 }
 
 /* All examples */
