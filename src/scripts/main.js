@@ -723,7 +723,7 @@ var HT = (function () {
             afterLoadData: function () {
               setTimeout(function () {
                 hotInstances['index'].selectCell(9999, 0);
-                loadDataButton.innerHTML = "100 000 rows loaded";
+                loadDataButton.innerHTML = "100 000 cells loaded";
               }, 250)
             }
           });
