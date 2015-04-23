@@ -872,6 +872,12 @@ header {
 
   }
 }
+.error-details {
+  margin: 3rem 0;
+  & #example {
+    margin-top: 3rem;
+  }
+}
 
 /* Footer */
 .footer {
