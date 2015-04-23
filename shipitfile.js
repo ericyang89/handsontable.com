@@ -10,7 +10,7 @@ module.exports = function (shipit) {
       repositoryUrl: 'https://github.com/handsontable/handsontable.com.git',
       branch: 'develop',
       ignores: ['.git', 'node_modules'],
-      rsync: ['-I', '--stats', '--chmod=ug=rwX,o=r'],
+      rsync: ['--del', '-I', '--stats', '--chmod=ug=rwX,o=r'],
       keepReleases: 3,
       shallowClone: true
     }
@@ -23,6 +23,14 @@ module.exports = function (shipit) {
   shipit.on('published', function() {
     var current = shipit.config.deployTo + '/current';
 
-    shipit.remote('cd ' + current + ' && npm install && bower install --config.interactive=false -F && grunt build');
+    shipit.remote('cd ' + current + ' && grunt clean:release').then(function() {
+      return shipit.remote('cd ' + current + ' && npm install');
+
+    }).then(function() {
+      return shipit.remote('cd ' + current + ' && bower install --config.interactive=false -F');
+
+    }).then(function() {
+      return shipit.remote('cd ' + current + ' && grunt build');
+    });
   });
 };

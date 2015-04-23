@@ -160,7 +160,8 @@ module.exports = function (grunt) {
       }
     },
     clean: {
-      dist: 'dist'
+      dist: 'dist',
+      release: ['dist', 'node_modules', 'bower_components']
     }
   });
 
