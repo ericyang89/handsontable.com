@@ -166,7 +166,7 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask('build', [
-    'clean',
+    'clean:dist',
     'pages',
     'compass',
     'copy',
