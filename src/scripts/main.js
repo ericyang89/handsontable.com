@@ -721,6 +721,7 @@ var HT = (function () {
       });
     },
     examples: function () {
+      return;
       var container = document.getElementById('examples');
 
       if (!container) {
@@ -741,11 +742,12 @@ var HT = (function () {
   me.tabs = function () {
     var tabs = $('.tabs'),
         container = document.getElementById('examples');
-
+    return;
     $(document).foundation({
       tab: {
         // there is a bug in foundation framework (doubled events fired after clicked tabs)
         callback: function (tab) {
+          return;
           if (!container) {
             return;
           }
@@ -768,9 +770,9 @@ var HT = (function () {
                 hotInstances['examples'].destroy();
               }
 
-              hotInstances['examples'] = new Handsontable(container, htInstanceSettings.settings);
-              hotInstances['examples'].loadData(htInstanceSettings.getData());
-              hotInstances['examples'].rootElement.setAttribute('id', tab.attr('name').toLowerCase());
+              //hotInstances['examples'] = new Handsontable(container, htInstanceSettings.settings);
+              //hotInstances['examples'].loadData(htInstanceSettings.getData());
+              //hotInstances['examples'].rootElement.setAttribute('id', tab.attr('name').toLowerCase());
             }
           }
         }
@@ -832,6 +834,215 @@ var HT = (function () {
   return me;
 }());
 
+HT.samples = (function () {
+
+  var me = {};
+
+  function trimCodeBlock(code, pad) {
+    var i, ilen;
+    pad = pad || 0;
+    code = code.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); //escape html special chars
+    code = code.split('\n');
+    for (i = 0; i < 10; i++) {
+      if (code[0].trim() === '') {
+        code.splice(0, 1);
+      }
+    }
+    var offset = 0;
+    for (i = 0, ilen = code[0].length; i < ilen; i++) {
+      if (code[0].charAt(i) != " ") {
+        break;
+      }
+      offset++;
+    }
+    for (i = 0, ilen = code.length; i < ilen; i++) {
+      code[i] = new Array(pad + 1).join(' ') + code[i].substring(offset);
+    }
+    return code;
+  }
+
+  function bindDumpButton() {
+
+    Handsontable.Dom.addEvent(document.body, 'click', function (e) {
+
+      var element = e.target || e.srcElement;
+
+      if (element.nodeName == "BUTTON" && element.name == 'dump') {
+        var name = element.getAttribute('data-dump');
+        var instance = element.getAttribute('data-instance');
+        var hot = window[instance];
+        console.log('data of ' + name, hot.getData());
+      }
+    });
+  }
+
+  function bindFiddleButton() {
+    Handsontable.Dom.addEvent(document.body, 'click', function (e) {
+      var element = e.target || e.srcElement;
+
+      if (element.className == "jsFiddleLink") {
+
+        var keys = ['common'];
+        var runfiddle = element.getAttribute('data-runfiddle');
+
+        if (!runfiddle) {
+          throw new Error("Edit in jsFiddle button does not contain runfiddle data");
+        }
+        keys.push(runfiddle);
+
+        var index = window.location.href.lastIndexOf("/") + 1;
+        var baseUrl = window.location.href.substr(0, index);
+
+        var tags = [];
+        var css = '';
+        var js = '';
+        var html = '';
+        var onDomReady = true;
+
+        tags.push('</style><!-- Ugly Hack due to jsFiddle issue: http://goo.gl/BUfGZ -->\n');
+        tags.push('<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>\n');
+
+        for (var i = 0, ilen = keys.length; i < ilen; i++) {
+
+          var dataFillde = document.querySelectorAll('[data-jsfiddle=' + keys[i] + ']');
+
+          for (var x = 0, len = dataFillde.length; x < len; x++) {
+
+            var tag;
+
+
+            if (dataFillde[x].nodeName === 'LINK') {
+              tag = dataFillde[x].outerHTML;
+            }
+            else if (dataFillde[x].nodeName === 'SCRIPT' && dataFillde[x].src) {
+              tag = dataFillde[x].outerHTML;
+            }
+            else if (dataFillde[x].nodeName === 'SCRIPT') {
+              js += trimCodeBlock(dataFillde[x].innerHTML, 2).join('\n') + '\n';
+            }
+            else if (dataFillde[x].nodeName === 'STYLE') {
+              css += trimCodeBlock(dataFillde[x].innerHTML).join('\n') + '\n';
+            }
+            else { //DIV
+
+              var clone = dataFillde[x].cloneNode(true);
+              var clonedExample = clone.querySelector('#' + runfiddle);
+              clonedExample.innerHTML = ''; //clear example HTML, just leave container
+              var originalHT = dataFillde[x].querySelector('#' + runfiddle);
+
+              var originalStyle = originalHT.getAttribute('data-originalstyle');
+              if (originalStyle) {
+                clonedExample.setAttribute('style', originalStyle);
+              }
+
+              var aName = clone.querySelectorAll('a[name]');
+              var hotHidden = clone.querySelectorAll('handsontable.hidden');
+
+              for (var n = 0, nLen = aName.length; n < nLen; n++) {
+                aName[n].parentNode.removeChild(aName[n]);
+              }
+
+              for (var h = 0, hLen = hotHidden.length; h < hLen; h++) {
+                hotHidden[h].parentNode.removeChild(hotHidden[h]);
+              }
+
+              html += trimCodeBlock(clone.innerHTML).join('\n');
+            }
+            if (tag) {
+              tag = tag.replace(' data-jsfiddle="' + keys[i] + '"', '');
+
+              if (tag.indexOf('href="http') === -1 && tag.indexOf('href="//') && tag.indexOf('src="http') === -1 && tag.indexOf('src="//')) {
+                tag = tag.replace('href="', 'href="' + baseUrl);
+                tag = tag.replace('src="', 'src="' + baseUrl);
+                tag = tag.replace('demo/../', '');
+
+                if (this.nodeName === 'LINK' && this.rel === "import") {
+                  //web component imports must be loaded throught a CORS-enabling proxy, because our local server does not support it yet
+                  tag = tag.replace('href="http://', 'href="http://www.corsproxy.com/');
+                  onDomReady = false;
+                }
+              }
+
+              tags.push(tag)
+            }
+          }
+
+        }
+
+        tags.push('');
+        tags.push('<style type="text/css">');
+        tags.push('body {background: white; margin: 20px;}');
+        tags.push('h2 {margin: 20px 0;}');
+        css = tags.join('\n') + '\n' + css;
+
+        js += trimCodeBlock(bindDumpButton.toString(), 2).join('\n') + '\n';
+        js += '  bindDumpButton();\n\n';
+
+        if (onDomReady) {
+          js = '$(document).ready(function () {\n\n' + js + '});';
+        }
+
+        var form = document.createElement('FORM');
+        form.action = 'http://jsfiddle.net/api/post/library/pure/';
+        form.method = 'POST';
+        form.target = '_blank';
+        form.innerHTML = '<input type="text" name="title" value="Handsontable example">' +
+          '<textarea name="html">' + html.replace(/</g, '&lt;').replace(/>/g, '&gt;') + '</textarea>' +
+          '<textarea name="js">' + js.replace(/</g, '&lt;').replace(/>/g, '&gt;') + '</textarea>' +
+          '<textarea name="css">' + css.replace(/</g, '&lt;').replace(/>/g, '&gt;') + '</textarea>';
+
+        form.style.visibility = 'hidden';
+//        var form = $('<form action="http://jsfiddle.net/api/post/library/pure/" method="post" target="_blank">' +
+//          '<input type="text" name="title" value="Handsontable example">' +
+//          '<textarea name="html">' + html.replace(/</g, '&lt;').replace(/>/g, '&gt;') + '</textarea>' +
+//          '<textarea name="js">' + js.replace(/</g, '&lt;').replace(/>/g, '&gt;') + '</textarea>' +
+//          '<textarea name="css">' + css.replace(/</g, '&lt;').replace(/>/g, '&gt;') + '</textarea>' +
+//          '</form>');
+//        form.css({
+//          visibility: 'hidden'
+//        });
+
+        document.body.appendChild(form);
+        form.submit();
+        form.parentNode.removeChild(form);
+
+
+      }
+    });
+  }
+
+  me.init = function () {
+    var codes = document.querySelectorAll('.descLayout pre.javascript code');
+    for (var i = 0, lenI = codes.length; i < lenI; i++) {
+      var scriptS = codes[i];
+      var codeS = trimCodeBlock(codes[i].innerHTML);
+      scriptS.innerHTML = codeS.join('\n');
+    }
+
+    var scripts = document.querySelectorAll('.codeLayout script');
+    for (var j = 0, lenJ = scripts.length; j < lenJ; j++) {
+      var script = scripts[j];
+      var pre = document.createElement('PRE');
+      pre.className = 'javascript';
+
+      var code = document.createElement('CODE');
+      var codeInner = trimCodeBlock(script.innerHTML);
+      codeInner = codeInner.join('<br>').replace(/  /g, "&nbsp;&nbsp;");
+      code.innerHTML = codeInner;
+      pre.appendChild(code);
+      script.parentNode.insertBefore(pre, script.nextSibling);
+    }
+    hljs.initHighlighting();
+
+    bindFiddleButton();
+    bindDumpButton();
+  };
+
+  return me;
+
+}());
+
 $(function() {
   HT.init();
+  HT.samples.init();
 });

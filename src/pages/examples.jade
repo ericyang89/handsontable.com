@@ -33,6 +33,26 @@ block content
                         #examples
 
                         #basic.content
+                            div.jsfiddle
+                              button.jsFiddleLink(data-runfiddle="basic_example") Edit in jsFiddle
+                              script(data-jsfiddle="basic_example")
+                                var container = document.getElementById('examples'),
+                                    hot;
+
+                                    var data = function () {
+                                      return Handsontable.helper.createSpreadsheetData(100, 12)
+                                    };
+                                hot = new Handsontable(container, {
+                                  data: data(),
+                                  height: 396,
+                                  colHeaders: true,
+                                  rowHeaders: true,
+                                  stretchH: 'all',
+                                  columnSorting: true,
+                                  contextMenu: true
+                                });
+
+
                         #advanced.content
                             h4 Total population by country
                             p Source of data: #{""}
