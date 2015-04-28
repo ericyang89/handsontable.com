@@ -12,12 +12,12 @@ block content
     .row
       .large-12.columns.text-center
         h2.mhead We couldn’t find the page you’re looking for.
-        h3.shead But guess what, you can still play with Handsontable below.
+        h3.shead.show-for-medium-up But guess what, you can still play with Handsontable below.
 
-        .row
-          #example.hot
+        .row.show-for-medium-up
+          #error.hot
           script
-            var container = document.getElementById('example'),
+            var container = document.getElementById('error'),
             hot1;
             hot1 = new Handsontable(container, {
               data: Handsontable.helper.createSpreadsheetData(10, 13),

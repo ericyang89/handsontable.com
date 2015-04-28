@@ -7,9 +7,12 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif!important;
 }
-a, a:visited, a:hover, a:visited:hover {
-  color: #0062A9;
+a, a:visited, a:hover {
+  color: #037BD2;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif!important;
+}
+a:hover, a:visited:hover {
+  color: #045AB0;
 }
 strong, b {
   font-weight: 600;
@@ -167,7 +170,7 @@ header {
     text-transform: uppercase;
   }
   & h2 {
-    font-size: 19px;
+    font-size: 20px;
     font-weight: 300;
   }
   & h3 {
@@ -234,15 +237,16 @@ header {
     width: 95%;
   }
   & .col-left .social-buttons iframe {
-    margin-right: 1.1rem;
+    margin-left: 1.1rem;
   }
   & .col-left .social-buttons iframe:first-child {
-    margin-right: 0;
+    margin-left: 0;
   }
   & .col-right {
     padding-top: 6rem;
   }
   & .col-right p {
+    margin-top: 23px;
     font-weight: 400;
   }
   & .col-right a {
@@ -665,6 +669,18 @@ header {
   & .handsontable {
     margin: auto;
   }
+  & .jsFiddleLink {
+    margin-top: 1rem;
+    padding: 0.6rem 1rem;
+    color: #fff;
+    font-weight: 400;
+    border-radius: 0;
+    font-size: 13px;
+    background: #75BB3D;
+  }
+  & .jsFiddleLink:hover {
+    background: #83C74D;
+  }
 }
 
 /* Support services */
@@ -689,7 +705,7 @@ header {
     background: #8BC34A;
   }
   & #pricing-plans {
-    margin: 1rem 0 2rem;
+    margin: 2rem 0;
   }
   & .tabs {
     width: 100%;
@@ -826,8 +842,8 @@ header {
   }
 }
 
-/* Terms of use, Credits, Privacy policy, Cookie statement */
-.plain-details {
+/* Legal notices */
+.legal-details {
   margin: 3rem 0;
   & hr {
     width: 13%;
@@ -842,13 +858,17 @@ header {
   }
   & dd ul {
     margin-left: 2rem;
-    font-size: 15px;
-    font-weight: 300;
+    font-size: 14px;
+    font-weight: 400;
   }
-  & .pgraph p {
+  & .pgraph {
     text-align: justify;
-    font-size: 15px;
-    font-weight: 300;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  & h3 {
+    margin-top: 1.25rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -874,8 +894,11 @@ header {
 }
 .error-details {
   margin: 3rem 0;
-  & #example {
-    margin-top: 3rem;
+  & #error {
+    margin: 3rem auto 0;
+  }
+  & .cell-dark {
+    background-color: #cdcdcd;
   }
 }
 
@@ -890,7 +913,7 @@ header {
   }
   & ul li p {
     margin-bottom: 0;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 13px;
   }
   & ul li.heading p {
@@ -900,8 +923,11 @@ header {
   }
   & ul li > a {
     margin-bottom: 14px;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 13px;
+  }
+  & .footer-logo {
+    max-width: 112px;
   }
   & .copyright span {
     color: #737373;
