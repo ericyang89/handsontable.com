@@ -15,7 +15,7 @@ module.exports = function (grunt) {
           pageSrc: 'src/pages',
           data: {
             hotVersion: '<%= bowerJson.dependencies.handsontable %>',
-            baseUrl: '/'
+            baseUrl: ''
           },
           pagination: {
             postsPerPage: 2,

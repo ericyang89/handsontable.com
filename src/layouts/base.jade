@@ -13,14 +13,15 @@ html
         meta(charset="utf-8")
         meta(name="viewport", content="width=device-width, initial-scale=1, user-scalable=no")
         meta(name="description", content="#{description}")
+
         include ../pages/_favicons
+
         script(src="#{data.baseUrl}bower_components/foundation/js/vendor/modernizr.js")
-        link(href="#{data.baseUrl}styles/main.css", rel="stylesheet")
-        link(href="#{data.baseUrl}bower_components/handsontable/dist/handsontable.full.min.css", rel="stylesheet")
-        link(href="#{data.baseUrl}bower_components/pikaday/css/pikaday.css", rel="stylesheet")
+        link(href="#{data.baseUrl}styles/main.css", rel="stylesheet")(data-jsfiddle="common")
+        link(href="#{data.baseUrl}bower_components/handsontable/dist/handsontable.full.min.css", rel="stylesheet")(data-jsfiddle="common")
         link(href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700);", rel="stylesheet")
 
-        script(src="#{data.baseUrl}scripts/highlight/highlight.pack.js")
+        //script(src="#{data.baseUrl}scripts/highlight/highlight.pack.js")
         link(href="#{data.baseUrl}scripts/highlight/styles/github.css", rel="stylesheet")
 
         script
@@ -30,12 +31,17 @@ html
         script(src="#{data.baseUrl}bower_components/jquery/jquery.min.js")
         script(src="#{data.baseUrl}bower_components/foundation/js/vendor/fastclick.js")
         script(src="#{data.baseUrl}bower_components/foundation/js/foundation.js")
-        script(src="#{data.baseUrl}bower_components/moment/moment.js")
-        script(src="#{data.baseUrl}bower_components/pikaday/pikaday.js")
-        script(src="#{data.baseUrl}bower_components/chroma-js/chroma.min.js")
+
         script(src="#{data.baseUrl}bower_components/handsontable/dist/handsontable.full.min.js")(data-jsfiddle="common")
-        script(src="#{data.baseUrl}bower_components/ruleJS/dist/full/ruleJS.all.full.js")
-        script(src="#{data.baseUrl}bower_components/handsontable-ruleJS/src/handsontable.formula.js")
+
+        script(src="#{data.baseUrl}bower_components/moment/moment.js")(data-jsfiddle="common", data-onlyfor="finance")
+        link(href="#{data.baseUrl}bower_components/pikaday/css/pikaday.css", rel="stylesheet")(data-jsfiddle="common", data-onlyfor="finance")
+        script(src="#{data.baseUrl}bower_components/pikaday/pikaday.js")(data-jsfiddle="common", data-onlyfor="finance")
+
+        script(src="#{data.baseUrl}bower_components/chroma-js/chroma.min.js")(data-jsfiddle="common", data-onlyfor="science")
+
+        script(src="#{data.baseUrl}bower_components/ruleJS/dist/full/ruleJS.all.full.js")(data-jsfiddle="common", data-onlyfor="personal")
+        script(src="#{data.baseUrl}bower_components/handsontable-ruleJS/src/handsontable.formula.js")(data-jsfiddle="common", data-onlyfor="personal")
 
         script(src="#{data.baseUrl}scripts/main.js")
         script#github-bjs(async="", defer="", src="https://buttons.github.io/buttons.js")
@@ -58,7 +64,6 @@ html
             block footer
                 include ../pages/_footer.jade
         block scripts
-
             script
                 !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
             script

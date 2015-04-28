@@ -262,7 +262,7 @@ var HT = (function () {
   ];
 
   var scienceData = [
-      ['<div><a href="https://plot.ly/~JStevens/0/" target="_blank" title="&lt;br&gt;An Age Distribution for Scientific Genius" style="display: block; text-align: center;"><img src="https://plot.ly/~JStevens/0.png" alt="&lt;br&gt;An Age Distribution for Scientific Genius" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src="\'https://plot.ly/404.png\'";" /></a><script data-plotly="JStevens:0" src="https://plot.ly/embed.js" async></script></div>',0.0008686210640608003,18.235294117647058,0.0015472312703583065,18.235294117647058],
+      ['<div><a href="https://plot.ly/~JStevens/0/" target="_blank" title="An Age Distribution for Scientific Genius" style="display: block; text-align: center;"><img src="https://plot.ly/~JStevens/0.png" alt="An Age Distribution for Scientific Genius" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src="\'https://plot.ly/404.png\'";" /></a><script data-plotly="JStevens:0" src="https://plot.ly/embed.js" async/></div>',0.0008686210640608003,18.235294117647058,0.0015472312703583065,18.235294117647058],
       ["",0.0013436482084690554,18.96551724137931,0.002219055374592834,18.843813387423936],
       ["",0.0019408251900108608,19.69574036511156,0.0031867535287730727,19.391480730223122],
       ["",0.0025651465798045606,20.425963488843813,0.004153094462540717,20.073022312373226],
@@ -531,14 +531,10 @@ var HT = (function () {
             fixedRowsTop: 1,
             colHeaders: true,
             rowHeaders: true,
-            //manualColumnResize: true,
-            //manualRowResize: true,
-            //columnSorting: true,
-            //contextMenu: true,
             formulas: true,
             comments: true,
             colWidths: [200, 85, 85, 85, 85, 85, 85, 85, 85, 85, 85, 85, 85, 85],
-            //minSpareCols: 20,
+
             cells: function (row, col, prop) {
               var cellProperties = {};
 
@@ -645,7 +641,7 @@ var HT = (function () {
           columns: [
             {data: 0, type: 'numeric'},
             {data: 1, type: 'text'},
-            {data: 2, renderer: 'html'},
+            {data: 2, renderer: 'html', width: 200},
             {data: 3, type: 'numeric', format: '$0,0.00'},
             {data: 4, type: 'numeric', format: '0.00%'},
             {data: 5, type: 'numeric', format: '0.00%'},
@@ -721,7 +717,6 @@ var HT = (function () {
       });
     },
     examples: function () {
-      return;
       var container = document.getElementById('examples');
 
       if (!container) {
@@ -742,12 +737,12 @@ var HT = (function () {
   me.tabs = function () {
     var tabs = $('.tabs'),
         container = document.getElementById('examples');
-    return;
+
     $(document).foundation({
       tab: {
         // there is a bug in foundation framework (doubled events fired after clicked tabs)
         callback: function (tab) {
-          return;
+
           if (!container) {
             return;
           }
@@ -770,9 +765,9 @@ var HT = (function () {
                 hotInstances['examples'].destroy();
               }
 
-              //hotInstances['examples'] = new Handsontable(container, htInstanceSettings.settings);
-              //hotInstances['examples'].loadData(htInstanceSettings.getData());
-              //hotInstances['examples'].rootElement.setAttribute('id', tab.attr('name').toLowerCase());
+              hotInstances['examples'] = new Handsontable(container, htInstanceSettings.settings);
+              hotInstances['examples'].loadData(htInstanceSettings.getData());
+              hotInstances['examples'].rootElement.setAttribute('id', tab.attr('name').toLowerCase());
             }
           }
         }
@@ -841,7 +836,7 @@ HT.samples = (function () {
   function trimCodeBlock(code, pad) {
     var i, ilen;
     pad = pad || 0;
-    code = code.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); //escape html special chars
+    code = code.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/\/\*/g,'').replace(/\*\//g, ''); //escape html special chars
     code = code.split('\n');
     for (i = 0; i < 10; i++) {
       if (code[0].trim() === '') {
@@ -879,11 +874,17 @@ HT.samples = (function () {
   function bindFiddleButton() {
     Handsontable.Dom.addEvent(document.body, 'click', function (e) {
       var element = e.target || e.srcElement;
-
       if (element.className == "jsFiddleLink") {
 
         var keys = ['common'];
         var runfiddle = element.getAttribute('data-runfiddle');
+
+        var closest = $(element).closest('.content');
+        var tab;
+
+        if (closest) {
+          tab = closest.attr('id');
+        }
 
         if (!runfiddle) {
           throw new Error("Edit in jsFiddle button does not contain runfiddle data");
@@ -899,7 +900,7 @@ HT.samples = (function () {
         var html = '';
         var onDomReady = true;
 
-        tags.push('</style><!-- Ugly Hack due to jsFiddle issue: http://goo.gl/BUfGZ -->\n');
+        tags.push('</style>\n');
         tags.push('<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>\n');
 
         for (var i = 0, ilen = keys.length; i < ilen; i++) {
@@ -907,63 +908,77 @@ HT.samples = (function () {
           var dataFillde = document.querySelectorAll('[data-jsfiddle=' + keys[i] + ']');
 
           for (var x = 0, len = dataFillde.length; x < len; x++) {
-
             var tag;
+            var onlyFor = dataFillde[x].attributes['data-onlyfor'];
+            var addTag = true;
 
+            if (onlyFor) {
+              if (tab && onlyFor.value.indexOf(tab) === -1) {
+                addTag = false;
+              }
+            }
 
-            if (dataFillde[x].nodeName === 'LINK') {
-              tag = dataFillde[x].outerHTML;
-            }
-            else if (dataFillde[x].nodeName === 'SCRIPT' && dataFillde[x].src) {
-              tag = dataFillde[x].outerHTML;
-            }
-            else if (dataFillde[x].nodeName === 'SCRIPT') {
-              js += trimCodeBlock(dataFillde[x].innerHTML, 2).join('\n') + '\n';
-            }
-            else if (dataFillde[x].nodeName === 'STYLE') {
-              css += trimCodeBlock(dataFillde[x].innerHTML).join('\n') + '\n';
-            }
-            else { //DIV
+            if (addTag) {
 
-              var clone = dataFillde[x].cloneNode(true);
-              var clonedExample = clone.querySelector('#' + runfiddle);
-              clonedExample.innerHTML = ''; //clear example HTML, just leave container
-              var originalHT = dataFillde[x].querySelector('#' + runfiddle);
+              if (dataFillde[x].nodeName === 'LINK') {
+                tag = dataFillde[x].outerHTML;
+              }
+              else if (dataFillde[x].nodeName === 'SCRIPT' && dataFillde[x].src) {
+                tag = dataFillde[x].outerHTML;
+              }
+              else if (dataFillde[x].nodeName === 'SCRIPT') {
+                js += trimCodeBlock(dataFillde[x].innerHTML, 2).join('\n') + '\n';
+              }
+              else if (dataFillde[x].nodeName === 'STYLE') {
+                css += trimCodeBlock(dataFillde[x].innerHTML).join('\n') + '\n';
+              }
+              else { //DIV
 
-              var originalStyle = originalHT.getAttribute('data-originalstyle');
-              if (originalStyle) {
-                clonedExample.setAttribute('style', originalStyle);
+                var clone = dataFillde[x].cloneNode(true);
+                var clonedExample = clone.querySelector('#' + runfiddle);
+                clonedExample.innerHTML = ''; //clear example HTML, just leave container
+                var originalHT = dataFillde[x].querySelector('#' + runfiddle);
+
+                var originalStyle = originalHT.getAttribute('data-originalstyle');
+                if (originalStyle) {
+                  clonedExample.setAttribute('style', originalStyle);
+                }
+
+                var aName = clone.querySelectorAll('a[name]');
+                var hotHidden = clone.querySelectorAll('handsontable.hidden');
+
+                for (var n = 0, nLen = aName.length; n < nLen; n++) {
+                  aName[n].parentNode.removeChild(aName[n]);
+                }
+
+                for (var h = 0, hLen = hotHidden.length; h < hLen; h++) {
+                  hotHidden[h].parentNode.removeChild(hotHidden[h]);
+                }
+                html += trimCodeBlock(clone.innerHTML).join('\n');
               }
 
-              var aName = clone.querySelectorAll('a[name]');
-              var hotHidden = clone.querySelectorAll('handsontable.hidden');
+              if (tag) {
+                tag = tag.replace(' data-jsfiddle="' + keys[i] + '"', '');
 
-              for (var n = 0, nLen = aName.length; n < nLen; n++) {
-                aName[n].parentNode.removeChild(aName[n]);
-              }
+                if (onlyFor) {
+                  tag = tag.replace(' data-onlyfor="' + onlyFor.value + '"', '');
+                }
 
-              for (var h = 0, hLen = hotHidden.length; h < hLen; h++) {
-                hotHidden[h].parentNode.removeChild(hotHidden[h]);
-              }
+                if (tag.indexOf('href="http') === -1 && tag.indexOf('href="//') && tag.indexOf('src="http') === -1 && tag.indexOf('src="//')) {
+                  tag = tag.replace('href="', 'href="' + baseUrl);
+                  tag = tag.replace('src="', 'src="' + baseUrl);
 
-              html += trimCodeBlock(clone.innerHTML).join('\n');
-            }
-            if (tag) {
-              tag = tag.replace(' data-jsfiddle="' + keys[i] + '"', '');
+                  if (this.nodeName === 'LINK' && this.rel === "import") {
+                    //web component imports must be loaded throught a CORS-enabling proxy, because our local server does not support it yet
+                    tag = tag.replace('href="http://', 'href="http://www.corsproxy.com/');
+                    onDomReady = false;
+                  }
+                }
 
-              if (tag.indexOf('href="http') === -1 && tag.indexOf('href="//') && tag.indexOf('src="http') === -1 && tag.indexOf('src="//')) {
-                tag = tag.replace('href="', 'href="' + baseUrl);
-                tag = tag.replace('src="', 'src="' + baseUrl);
-                tag = tag.replace('demo/../', '');
-
-                if (this.nodeName === 'LINK' && this.rel === "import") {
-                  //web component imports must be loaded throught a CORS-enabling proxy, because our local server does not support it yet
-                  tag = tag.replace('href="http://', 'href="http://www.corsproxy.com/');
-                  onDomReady = false;
+                if (tags.indexOf(tag) === -1) {
+                  tags.push(tag)
                 }
               }
-
-              tags.push(tag)
             }
           }
 
@@ -975,8 +990,8 @@ HT.samples = (function () {
         tags.push('h2 {margin: 20px 0;}');
         css = tags.join('\n') + '\n' + css;
 
-        js += trimCodeBlock(bindDumpButton.toString(), 2).join('\n') + '\n';
-        js += '  bindDumpButton();\n\n';
+        //js += trimCodeBlock(bindDumpButton.toString(), 2).join('\n') + '\n';
+        //js += '  bindDumpButton();\n\n';
 
         if (onDomReady) {
           js = '$(document).ready(function () {\n\n' + js + '});';
@@ -1032,10 +1047,10 @@ HT.samples = (function () {
       pre.appendChild(code);
       script.parentNode.insertBefore(pre, script.nextSibling);
     }
-    hljs.initHighlighting();
+    //hljs.initHighlighting();
 
     bindFiddleButton();
-    bindDumpButton();
+    //bindDumpButton();
   };
 
   return me;

@@ -95,17 +95,13 @@
   }
 }
 
-/* Basic */
-#examples {
-  //min-height: 948px;
-}
-
 /* Advanced */
-#advanced {
+#advanced, #adv_example {
   .htCore > tbody > tr:nth-child(odd) > td {
      background-color: #f9f9f9;
   }
 }
 
-
-
+.hidden {
+  display: none;
+}
