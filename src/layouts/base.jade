@@ -21,7 +21,6 @@ html
         link(href="#{data.baseUrl}bower_components/handsontable/dist/handsontable.full.min.css", rel="stylesheet")(data-jsfiddle="common")
         link(href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700);", rel="stylesheet")
 
-        //script(src="#{data.baseUrl}scripts/highlight/highlight.pack.js")
         link(href="#{data.baseUrl}scripts/highlight/styles/github.css", rel="stylesheet")
 
         script.
@@ -56,7 +55,7 @@ html
                 nav.show-for-medium-up
                     .row
                         .breadcrumbs
-                            a(href="#{data.baseUrl}") Home
+                            a(href="/") Home
                             span #{page_name}
         .content
             block content
