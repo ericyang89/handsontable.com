@@ -57,8 +57,10 @@
       ]
     });
   }
-  $("td").on("click", function () {
-    $(this).toggleClass('cell-dark');
+  $(function() {
+    init();
+    $("td").on("click", function () {
+      $(this).toggleClass('cell-dark');
+    });
   });
-  $(init);
 }());
