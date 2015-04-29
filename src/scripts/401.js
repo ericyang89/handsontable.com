@@ -1,6 +1,6 @@
 (function() {
   var
-    container = document.getElementById('example1'),
+    container = document.getElementById('error'),
     hot1;
 
   function init() {

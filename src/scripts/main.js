@@ -671,6 +671,7 @@ var HT = (function () {
         colHeaders: true,
         rowHeaders: true,
         width: 500,
+        maxRows: 12,
         height: 308,
         colWidths: 74,
         afterLoadData: function () {
