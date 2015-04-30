@@ -2,6 +2,7 @@
   "name": "Handsontable.com",
   "homepage": "http://handsontable.com/",
   "version": "0.0.1",
+  "private": true,
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-bowercopy": "^1.2.0",
