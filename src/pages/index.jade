@@ -193,18 +193,18 @@ block content
                                     li.indent-1 &#60;html&#62;
                                     li.indent-2 &#60;head&#62;
                                     li.indent-3 &#60;title&#62;Handsontable&#60;/title&#62;
-                                    li.indent-3.line-1 &#60;script src="dist/handsontable.full.js"&#62;&#60;/script&#62;
-                                    li.indent-3.line-1 &#60;link rel="stylesheet" href="dist/handsontable.full.css" /&#62;
+                                    li.indent-3.line-1 &#60;script src="/dist/handsontable.full.js"&#62;&#60;/script&#62;
+                                    li.indent-3.line-1 &#60;link rel="stylesheet" href="/dist/handsontable.full.css" /&#62;
                                     li.indent-2 &#60;/head&#62;
                                     li.indent-2 &#60;body&#62;
+                                    li.indent-3.line-2 &nbsp;&nbsp;&#60;div id="example"&#62; &#60;/div&#62;
                                     li.indent-3.line-2 &#60;script&#62;
-                                    li.indent-4.line-2 var data = ["1", "2", "3"];
+                                    li.indent-4.line-2 var data = [['Column A', 'Column B', 'Column C'], ['1', '2', '3']];
                                     li.indent-4.line-2 var container = document.getElementById("example");
-                                    li.indent-4.line-2 var hot = new Handsontable ({
+                                    li.indent-4.line-2 var hot = new Handsontable(container, {
                                     li.indent-5.line-2 data: data
                                     li.indent-4.line-2 });
                                     li.indent-3.line-2 &#60;/script&#62;
-                                    li.indent-3.line-2 &#60;div id="example"&#62; &#60;/div&#62;
                                     li.indent-2 &#60;/body&#62;
                                     li.indent-1 &#60;/html&#62;
     .clients.text-center

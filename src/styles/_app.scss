@@ -453,7 +453,7 @@ header {
   & .browser .viewport li.indent-5:before {
     margin-right: 180px;
   }
-  & .browser .viewport li.active, & .browser .viewport li.active:before, & .browser .viewport ol li:hover {
+  & .browser .viewport li.active, & .browser .viewport li.active:before {
     color: #fff;
     background-color: #0b79ff;
     -webkit-transition: color 0.1s linear, background-color 0.1s linear;

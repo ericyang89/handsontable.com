@@ -161,13 +161,12 @@ module.exports = function (grunt) {
       }
     },
     clean: {
-      dist: 'dist',
-      release: ['dist', 'node_modules', 'bower_components']
+      dist: 'dist'
     }
   });
 
   grunt.registerTask('build', [
-    'clean:dist',
+    'clean',
     'pages',
     'compass',
     'copy',
@@ -184,11 +183,13 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('default', 'server');
-  require('load-grunt-tasks')(grunt);
 
   grunt.loadNpmTasks('grunt-bowercopy');
+  grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-pages');
   grunt.loadNpmTasks('grunt-robots-txt');
   grunt.loadNpmTasks('grunt-xml-sitemap');
-  grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-contrib-concat');
 };
