@@ -1,6 +1,6 @@
 # Handsontable.com
 It's the offical website of [Handsontable](https://github.com/handsontable/handsontable) data grid.  
-~~Go to http://handsontable.com to see it live.~~ **Coming soon!**
+Go to http://handsontable.com to see it live.
 
 ## Install
 Before you can build this code, you must install necessary dependencies in your local dev environment:

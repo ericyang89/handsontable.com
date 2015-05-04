@@ -95,6 +95,10 @@
   }
 }
 
+div#example-filters * {
+  outline: 0;
+}
+
 /* Advanced */
 #advanced, #adv_example {
   .htCore > tbody > tr:nth-child(odd) > td {
