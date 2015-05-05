@@ -93,26 +93,10 @@ module.exports = function (grunt) {
         ]
       }
     },
-    xml_sitemap: {
-      default_options: {
-        options: {
-          changefreq: 'weekly',
-          dest: 'dist/',
-          fileName: 'sitemap',
-          siteRoot: 'http://handsontable.com/',
-          lastMod: '2015-02-25',
-          priority: '0.8'
-        },
-        files: [
-          {
-            expand: true,
-            cwd: 'dist/',
-            src: [
-              '*.html',
-              '!_*.html'
-            ]
-          }
-        ]
+    sitemap: {
+      dist: {
+        pattern: ['dist/*.html', '!dist/40*.html', '!dist/_*.html'],
+        siteRoot: 'dist/'
       }
     },
     watch: {
@@ -172,7 +156,7 @@ module.exports = function (grunt) {
     'copy',
     'bowercopy',
     'robotstxt:dist',
-    'xml_sitemap:default_options'
+    'sitemap'
   ]);
 
   grunt.registerTask('server', [
@@ -191,5 +175,5 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-pages');
   grunt.loadNpmTasks('grunt-robots-txt');
-  grunt.loadNpmTasks('grunt-xml-sitemap');
+  grunt.loadNpmTasks('grunt-sitemap');
 };
