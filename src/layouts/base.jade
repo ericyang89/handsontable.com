@@ -44,9 +44,11 @@ html
 
         script(src="#{data.baseUrl}scripts/main.js")
         script#github-bjs(async="", defer="", src="https://buttons.github.io/buttons.js")
+        script(src="#{data.baseUrl}scripts/zopim.js")
 
     body(class="#{page_class} #{page_subclass}")
         include ../pages/tag_manager.jade
+        include ../pages/_top-notification.jade
         header
             block navigation
                 include ../pages/_menu.jade
