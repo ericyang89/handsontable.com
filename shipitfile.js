@@ -11,7 +11,7 @@ module.exports = function (shipit) {
       branch: 'master',
       ignores: ['.git', 'node_modules'],
       rsync: ['--force', '--delete', '--delete-excluded', '-I', '--stats', '--chmod=ug=rwX'],
-      keepReleases: 3,
+      keepReleases: 5,
       shallowClone: false
     }
   });
@@ -20,14 +20,23 @@ module.exports = function (shipit) {
     shipit.remote('pwd');
   });
 
-  shipit.on('published', function() {
-    var current = shipit.config.deployTo + '/current';
+  shipit.blTask('deploy', [
+    'deploy:init',
+    'deploy:fetch',
+    'deploy:update'
+  ]);
+
+  shipit.on('updated', function() {
+    var current = shipit.releasePath;
 
     shipit.remote('cd ' + current + ' && npm install --production').then(function() {
       return shipit.remote('cd ' + current + ' && bower install --config.interactive=false -F');
 
     }).then(function() {
       return shipit.remote('cd ' + current + ' && grunt build');
+
+    }).then(function() {
+      shipit.start(['deploy:publish', 'deploy:clean']);
     });
   });
 };
