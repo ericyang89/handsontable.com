@@ -508,6 +508,7 @@ var HT = (function () {
             rowHeaders: true,
             stretchH: 'all',
             columnSorting: true,
+            sortIndicator: true,
             contextMenu: true,
             className: "htCenter htMiddle",
             readOnly: true,
