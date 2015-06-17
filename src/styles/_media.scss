@@ -269,6 +269,39 @@ header {
     }
   }
 }
+.signup {
+  @media #{$small-only} {
+    background-image: none;
+    .sign-up-details {
+      h2.mhead {
+        font-size: 30px;
+      }
+      h3.shead {
+        font-size: 21px;
+      }
+      h4 {
+        margin-top: 50px;
+        font-size: 16px;
+      }
+      .form {
+        padding: 6%;
+        input[type="submit"] {
+          width: 100%;
+        }
+      }
+    }
+    .footer {
+      margin-top: 60px;
+    }
+  }
+  @media #{$medium-only} {
+    .sign-up-details {
+      h2.mhead {
+        font-size: 32px;
+      }
+    }
+  }
+}
 .footer {
   @media #{$small-only} {
     padding: 2rem 0 1rem;

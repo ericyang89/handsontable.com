@@ -1,0 +1,59 @@
+extends ../layouts/blank
+
+block variables
+    page_name = "Sign up for Handsontable PRO"
+    page_class = "signup"
+    page_subclass = "subpage"
+    title = "Sign up for Handsontable PRO"
+    description = "Handsontable - JavaScript data grid editor. Excel-like grid editing with HTML & JavaScript"
+
+block content
+    #counter
+      span
+    script.
+      $('#counter span').countdown("2015/09/07", function(event) {
+          $(this).html(event.strftime(''
+             + '<span>%D</span> days '
+             + '<span>%H</span> hours '
+             + '<span>%M</span> minutes left '));
+        });
+    .sign-up-details
+      .row
+            .large-12.columns.text-center
+                h2.mhead We are working hard on Handsontable PRO
+                h3.shead Powerful spreadsheet for fast deployment is coming soon
+                h4 Sing up today for early birds discount
+                .form.large-6.medium-10.columns.small-centered
+                    // Begin MailChimp Signup Form
+                    #mc_embed_signup
+                      form#mc-embedded-subscribe-form.validate(action='//handsontable.us9.list-manage.com/subscribe/post?u=47073b08d03ebee16188c1687&id=f9ef6e2b33', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='')
+                        #mc_embed_signup_scroll
+                          .mc-field-group
+                            label(for='mce-EMAIL') Email Address
+                            | &#x9;
+                            input#mce-EMAIL.required.email(type='email', value='', name='EMAIL')
+                          .mc-field-group
+                            label(for='mce-FNAME') First Name
+                            | &#x9;
+                            input#mce-FNAME.required(type='text', value='', name='FNAME')
+                          | &#x9;
+                          #mce-responses.clear
+                            #mce-error-response.response(style='display:none')
+                            | &#x9;&#x9;
+                            #mce-success-response.response(style='display:none')
+                          // real people should not fill this in and expect good things - do not remove this or risk form bot signups
+                          div(style='position: absolute; left: -5000px;')
+                            input(type='text', name='b_47073b08d03ebee16188c1687_f9ef6e2b33', tabindex='-1', value='')
+                          .clear
+                            input#mc-embedded-subscribe.button(type='submit', value='Subscribe me', name='subscribe')
+                          .clear
+                            span.note We respect your privacy and will never spam you with irrevelant information.
+                      script(type='text/javascript', src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js')
+                      script(type='text/javascript').
+                        (function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';}(jQuery));var $mcj = jQuery.noConflict(true);
+                      // End mc_embed_signup
+
+
+
+
+

@@ -11,6 +11,7 @@
     "font-awesome": "~4.3.0",
     "chroma-js": "~0.5.6",
     "handsontable": "~0.15.0-beta2",
-    "handsontable-ruleJS": "https://github.com/handsontable/handsontable-ruleJS/archive/0.0.4.zip"
+    "handsontable-ruleJS": "https://github.com/handsontable/handsontable-ruleJS/archive/0.0.4.zip",
+    "jquery.countdown": "~2.0.4"
   }
 }
