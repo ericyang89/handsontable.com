@@ -46,7 +46,6 @@ html
 
         script#github-bjs(async="", defer="", src="https://buttons.github.io/buttons.js")
         script(src="#{data.baseUrl}scripts/zopim.js")
-      script(src="#{data.baseUrl}scripts/mixpanel.js")
 
     body(class="#{page_class} #{page_subclass}")
         include ../pages/tag_manager.jade
@@ -73,7 +72,3 @@ html
                 (function($) {
                     $(document).foundation();
                 })(jQuery);
-            script
-              mixpanel.track("Page visit", {
-                  "name": "#{page_name}"
-              });

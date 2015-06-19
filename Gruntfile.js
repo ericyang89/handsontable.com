@@ -71,7 +71,8 @@ module.exports = function (grunt) {
               'moment': 'moment',
               'chroma-js': 'chroma-js',
               'ruleJS': 'ruleJS',
-              'handsontable-ruleJS': 'handsontable-ruleJS'
+              'handsontable-ruleJS': 'handsontable-ruleJS',
+              'jquery.countdown': 'jquery.countdown'
           }
       }
     },
