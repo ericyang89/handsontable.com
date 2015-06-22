@@ -9,9 +9,9 @@ block variables
 
 block content
     #counter
-      span
+      .numbers
     script.
-      $('#counter span').countdown("2015/09/07", function(event) {
+      $('#counter .numbers').countdown("2015/09/07", function(event) {
           $(this).html(event.strftime(''
              + '<span>%D</span> days '
              + '<span>%H</span> hours '
