@@ -41,6 +41,39 @@ header {
     padding-bottom: 2rem;
   }
 }
+.notification {
+  @media #{$small-only} {
+    padding: 3% 2%;
+    .notif-details {
+      & span {
+        display: block;
+        text-align: center;
+        box-shadow: none;
+      }
+      & a.btn {
+        margin: 14px auto 0;
+        display: block;
+        text-align: center;
+      }
+    }
+  }
+  @media #{$medium-only} {
+    padding: 3% 2%;
+    .notif-details {
+      & span {
+        display: block;
+        text-align: center;
+        box-shadow: none;
+      }
+      & a.btn {
+        max-width: 60%;
+        margin: 14px auto 0;
+        display: block;
+        text-align: center;
+      }
+    }
+  }
+}
 .banner {
   @media #{$small-only} {
     padding: 0;
@@ -272,6 +305,9 @@ header {
 .signup {
   @media #{$small-only} {
     background-image: none;
+    #counter .numbers {
+      padding: 2% 5%;
+    }
     .sign-up-details {
       h2.mhead {
         font-size: 30px;

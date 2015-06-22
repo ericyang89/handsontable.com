@@ -151,14 +151,10 @@ header {
 
 /* notification above the header */
 .notification {
-  height: 41px;
   text-align: right;
   background-color: #222;
   & .notif-details {
-    padding: 5px 0 0px;
-    & img {
-      border-radius: 100px;
-    }
+    padding: 6px 15px 13px;
     & span {
       padding: 0px 0px 3px;
       font-size: 12px;
@@ -942,7 +938,7 @@ header {
   background: #2f76be url(../images/bg-pro.jpg) no-repeat 50% 0;
   #counter {
     text-align: center;
-    & span {
+    & .numbers {
       margin: 0 auto;
       padding: 0.8% 2%;
       color: #fff;
@@ -951,8 +947,12 @@ header {
       display: inline-block;
       border-radius: 0 0 6px 6px;
       background-color: #0c5fb2;
-      & > span {
+      & span {
+        margin-left: 10px;
         font-weight: 600;
+        &:first-child {
+          margin-left: 0;
+        }
       }
     }
   }
